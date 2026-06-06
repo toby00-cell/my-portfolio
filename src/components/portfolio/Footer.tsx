@@ -10,7 +10,7 @@ const footerLinks = [
 ];
 
 const socials = [
-  { icon: Github, href: "https://github.com/brightjoel", label: "GitHub" },
+  { icon: Github, href: "https://github.com/toby00-cell", label: "GitHub" },
   { icon: Twitter, href: "https://twitter.com/brightjoel", label: "Twitter" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/bright-joel-01823026b", label: "LinkedIn" },
 ];
@@ -29,7 +29,7 @@ export function Footer() {
               Tobi
             </p>
             <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-              Launch beautiful, fast websites and AI-powered tools for your Nigerian business — in under 4 weeks.
+              Launch beautiful, fast websites and AI-powered tools for your Nigerian business — in under 2 weeks.
             </p>
           </div>
 

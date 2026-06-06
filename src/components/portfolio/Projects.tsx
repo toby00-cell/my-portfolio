@@ -1,6 +1,9 @@
 import { projects } from "@/data/portfolio";
 import { ArrowUpRight } from "lucide-react";
 
+const FEATURED_IDS = ["naijathreads", "learnbridge", "ninety-minds"];
+const featured = FEATURED_IDS.map((id) => projects.find((p) => p.id === id)!);
+
 export function Projects() {
   return (
     <section id="projects" className="mx-auto mt-32 max-w-6xl px-4">
@@ -19,7 +22,7 @@ export function Projects() {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
-        {projects.map((p, i) => (
+        {featured.map((p, i) => (
           <article
             key={p.id}
             className={`group relative overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-card)] transition hover:-translate-y-1 hover:shadow-[var(--shadow-soft)] md:p-8 ${
@@ -70,6 +73,15 @@ export function Projects() {
             </div>
           </article>
         ))}
+      </div>
+
+      <div className="mt-10 flex justify-center">
+        <a
+          href="/projects"
+          className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium text-foreground transition hover:bg-card"
+        >
+          See all projects <ArrowUpRight className="h-4 w-4" />
+        </a>
       </div>
     </section>
   );

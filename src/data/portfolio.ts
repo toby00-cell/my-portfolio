@@ -25,7 +25,7 @@ export const projects: Project[] = [
     image: naijathreads,
     url: "https://naijathreads.name.ng/",
     tags: ["Product Catalog", "Cart & Checkout", "Mobile-first"],
-    year: "2025",
+    year: "2026",
   },
   {
     id: "t-homes",
@@ -37,7 +37,7 @@ export const projects: Project[] = [
     image: thomes,
     url: "https://t-homes.name.ng",
     tags: ["Listings", "Search & Filters", "Agent Profiles"],
-    year: "2025",
+    year: "2026",
   },
   {
     id: "learnbridge",
@@ -49,7 +49,7 @@ export const projects: Project[] = [
     image: learnbridge,
     url: "https://techbridge.naijathreads.workers.dev/",
     tags: ["Courses", "Student Dashboard", "Clean UX"],
-    year: "2025",
+    year: "2026",
   },
 ];
 
@@ -72,7 +72,7 @@ export const services = [
     title: "E-commerce / Real Estate / EdTech",
     description:
       "Product catalogs, property listings or course platforms — robust web apps tailored to your business model.",
-    price: "₦250k",
+    price: "₦300k",
     features: ["Custom features", "Admin dashboard", "Payments-ready", "Scalable"],
   },
 ];
@@ -89,7 +89,7 @@ export const profile = {
   stats: [
     { label: "Projects shipped", value: "3+" },
     { label: "Happy clients", value: "100%" },
-    { label: "Avg. delivery", value: "2–4 wks" },
+    { label: "Avg. delivery", value: "1–2 wks" },
     { label: "Available", value: "Now" },
   ],
 };

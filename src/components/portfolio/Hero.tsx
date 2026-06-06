@@ -4,9 +4,23 @@ import profilePic from "@/assets/profile.png";
 
 const icons = [TrendingUp, FolderOpen, Clock, Zap];
 
+const floatStyles = [
+  { animation: "float 3s ease-in-out infinite" },
+  { animation: "float 3.5s ease-in-out infinite" },
+  { animation: "float 4s ease-in-out infinite" },
+  { animation: "float 3.2s ease-in-out infinite" },
+];
+
 export function Hero() {
   return (
     <section id="top" className="mx-auto mt-12 max-w-6xl px-4 md:mt-20">
+      <style>{`
+        @keyframes float {
+          0%, 100% { transform: translateY(0px); }
+          50% { transform: translateY(-8px); }
+        }
+      `}</style>
+
       <div className="grid items-center gap-12 md:grid-cols-2">
         <div>
           <div className="mb-8 flex items-center gap-4">
@@ -54,7 +68,8 @@ export function Hero() {
               return (
                 <div
                   key={s.label}
-                  className={`rounded-2xl p-5 float-${i + 1} ${
+                  style={floatStyles[i]}
+                  className={`rounded-2xl p-5 ${
                     isAccent
                       ? "bg-primary text-primary-foreground"
                       : "bg-primary-soft/50 text-foreground"

@@ -6,13 +6,15 @@ import { Services } from "@/components/portfolio/Services";
 import { Blog } from "@/components/portfolio/Blog";
 import { Contact } from "@/components/portfolio/Contact";
 import { Footer } from "@/components/portfolio/Footer";
+import { ServiceTeaser } from "@/components/portfolio/ServiceTeaser";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Bright Joel — Web Designer & Developer" },
+      { title: "Bright Joel — Web Developer & Designer" },
       { name: "description", content: "I design and build beautiful, fast websites for Nigerian founders and businesses — landing pages, e-commerce, real estate and EdTech." },
-      { property: "og:title", content: "Bright Joel — Web Designer & Developer" },
+      { property: "og:title", content: "Bright Joel — Web Developer & Designer" },
       { property: "og:description", content: "Landing pages, business sites, e-commerce, real estate and EdTech — built to look great and convert." },
     ],
   }),
@@ -26,7 +28,7 @@ function Index() {
       <main>
         <Hero />
         <Projects />
-        <Services />
+        <ServiceTeaser /> 
         <Blog />
         <Contact />
       </main>

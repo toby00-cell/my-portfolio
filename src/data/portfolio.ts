@@ -1,6 +1,7 @@
 import naijathreads from "@/assets/naijathreads.png";
 import thomes from "@/assets/thomes.png";
 import learnbridge from "@/assets/learnbridge.png";
+import farmpulse from "@/assets/farmpulse.png";
 
 export type Project = {
   id: string;
@@ -51,6 +52,18 @@ export const projects: Project[] = [
     tags: ["Courses", "Student Dashboard", "Clean UX"],
     year: "2026",
   },
+  {
+    id: "farmpulse",
+    title: "FarmPulse Nigeria",
+    category: "Business",
+    tagline: "Independent agricultural news platform",
+    description:
+      "An editorial news platform covering Nigerian agriculture — agritech, livestock, markets, climate and policy. Built for farmers, agribusiness owners and food-system professionals.",
+    image: farmpulse,
+    url: "https://farmpulse-rosy.vercel.app",
+    tags: ["News & Editorial", "Content Platform", "Mobile-first"],
+    year: "2026",
+  },
 ];
 
 export const services = [
@@ -87,7 +100,7 @@ export const profile = {
   whatsapp: "2349040522602",          // ← add your number (no +)
   avatar: undefined as string | undefined,
   stats: [
-    { label: "Projects shipped", value: "3+" },
+    { label: "Projects shipped", value: "5+" },
     { label: "Happy clients", value: "100%" },
     { label: "Avg. delivery", value: "1–2 wks" },
     { label: "Available", value: "Now" },

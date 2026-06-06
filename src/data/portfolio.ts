@@ -2,6 +2,7 @@ import naijathreads from "@/assets/naijathreads.png";
 import thomes from "@/assets/thomes.png";
 import learnbridge from "@/assets/learnbridge.png";
 import farmpulse from "@/assets/farmpulse.png";
+import ninetyminds from "@/assets/ninetyminds.png";
 
 export type Project = {
   id: string;
@@ -62,6 +63,18 @@ export const projects: Project[] = [
     image: farmpulse,
     url: "https://farmpulse-rosy.vercel.app",
     tags: ["News & Editorial", "Content Platform", "Mobile-first"],
+    year: "2026",
+  },
+  {
+    id: "ninety-minds",
+    title: "Ninety Minds",
+    category: "Business",
+    tagline: "Grassroots football talent & wellness platform",
+    description:
+      "A platform for scouting grassroots Nigerian football talent and supporting player wellness — featured players, wellness hub, club management and talent discovery.",
+    image: ninetyminds,
+    url: "https://ninetyminds.naijathreads.workers.dev",
+    tags: ["Sports Tech", "Talent Scouting", "Wellness"],
     year: "2026",
   },
 ];

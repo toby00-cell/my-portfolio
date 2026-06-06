@@ -11,6 +11,19 @@ const floatStyles = [
   { animation: "float 3.2s ease-in-out infinite" },
 ];
 
+const SKILLS = [
+  "TypeScript",
+  "React",
+  "Node.js",
+  "C#",
+  "ASP.NET Core",
+  "Python",
+  "Machine Learning",
+  "Supabase / PostgreSQL",
+  "SQL Server",
+  "MongoDB",
+];
+
 export function Hero() {
   return (
     <section id="top" className="mx-auto mt-12 max-w-6xl px-4 md:mt-20">
@@ -57,6 +70,22 @@ export function Hero() {
             >
               View projects
             </a>
+          </div>
+
+          <div className="mt-10">
+            <p className="mb-3 text-xs font-medium uppercase tracking-wider text-muted-foreground">
+              Technologies
+            </p>
+            <div className="flex flex-wrap gap-2">
+              {SKILLS.map((skill) => (
+                <span
+                  key={skill}
+                  className="rounded-full border border-border bg-surface px-3 py-1 text-xs font-medium text-foreground transition hover:border-primary hover:text-primary"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 

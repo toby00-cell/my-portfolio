@@ -20,7 +20,7 @@ const services = [
     title: "Website Design & Development",
     description: "Modern, responsive websites that convert visitors into customers — landing pages, business sites, e-commerce, real estate and EdTech platforms.",
     icon: Globe,
-    features: ["Landing pages from ₦150k", "Full business websites from ₦200k", "E-commerce & platforms from ₦300k", "Mobile-first design", "Fast delivery"],
+    features: ["Landing pages from ₦150k", "Full business websites from ₦200k", "E-commerce & platforms from ₦350k", "Mobile-first design", "Fast delivery"],
   },
   {
     id: "ai-agents",

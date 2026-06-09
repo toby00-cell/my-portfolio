@@ -3,68 +3,34 @@ import { Check } from "lucide-react";
 
 export function Services() {
   return (
-    <section id="services" className="mx-auto mt-32 max-w-6xl px-4">
-      <div className="mb-12">
-        <p className="mb-2 text-sm font-medium uppercase tracking-wider text-primary">
-          Services
-        </p>
-        <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
-          What I can build for you
-        </h2>
-        <p className="mt-4 max-w-2xl text-muted-foreground">
-          Transparent pricing. Pick what fits your business — every project is custom-designed, mobile-first and built to load fast.
-        </p>
-      </div>
+    <section id="services" className="border-b border-border">
+      <div className="mx-auto max-w-6xl px-4 py-20">
+        <div className="mb-12 border-b border-border pb-6">
+          <div className="mono-label !text-primary"> 03 · Services</div>
+          <h2 className="mt-2 font-display text-4xl uppercase md:text-5xl">
+            Engineered <span className="text-primary">deliverables.</span>
+          </h2>
+        </div>
 
-      <div className="grid gap-5 md:grid-cols-3">
-        {services.map((s, i) => {
-          const featured = i === 1;
-          return (
-            <div
-              key={s.title}
-              className={`flex flex-col rounded-3xl border p-7 transition ${
-                featured
-                  ? "border-primary bg-primary text-primary-foreground shadow-[var(--shadow-soft)]"
-                  : "border-border bg-card text-foreground shadow-[var(--shadow-card)]"
-              }`}
-            >
-              <h3 className="text-xl font-semibold tracking-tight">{s.title}</h3>
-              <p className={`mt-2 text-sm ${featured ? "text-primary-foreground/85" : "text-muted-foreground"}`}>
-                {s.description}
-              </p>
-              <div className="mt-6 flex items-baseline gap-2">
-                <span className="text-4xl font-semibold tracking-tight">{s.price}</span>
-                <span className={`text-sm ${featured ? "text-primary-foreground/70" : "text-muted-foreground"}`}>
-                  starting
-                </span>
-              </div>
-              <ul className="mt-6 space-y-3 text-sm">
+        <div className="grid gap-6 md:grid-cols-3">
+          {services.map((s, i) => (
+            <div key={s.title} className="relative border border-border bg-card p-6">
+              <span className="fig-tag">PKG · {String(i + 1).padStart(2, "0")}</span>
+              <div className="mono-label">From</div>
+              <div className="mt-1 font-display text-3xl text-primary">{s.price}</div>
+              <h3 className="mt-5 font-display text-xl uppercase">{s.title}</h3>
+              <p className="mt-2 text-sm text-foreground/75">{s.description}</p>
+              <ul className="mt-5 space-y-2 border-t border-border pt-4">
                 {s.features.map((f) => (
-                  <li key={f} className="flex items-center gap-2">
-                    <span
-                      className={`flex h-5 w-5 items-center justify-center rounded-full ${
-                        featured ? "bg-white/20" : "bg-primary-soft text-primary"
-                      }`}
-                    >
-                      <Check className="h-3 w-3" />
-                    </span>
+                  <li key={f} className="flex items-start gap-2 font-mono text-xs text-foreground/80">
+                    <Check className="mt-0.5 h-3.5 w-3.5 text-primary flex-shrink-0" />
                     {f}
                   </li>
                 ))}
               </ul>
-              <a
-                href="#contact"
-                className={`mt-8 inline-flex items-center justify-center rounded-full px-5 py-3 text-sm font-medium transition ${
-                  featured
-                    ? "bg-white text-primary hover:brightness-95"
-                    : "bg-foreground text-background hover:opacity-90"
-                }`}
-              >
-                Get started
-              </a>
             </div>
-          );
-        })}
+          ))}
+        </div>
       </div>
     </section>
   );

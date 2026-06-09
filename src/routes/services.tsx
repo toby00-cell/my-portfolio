@@ -1,7 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Nav } from "@/components/portfolio/Nav";
 import { Footer } from "@/components/portfolio/Footer";
-import { Globe, Bot, Palette, Search, ArrowLeft, ArrowUpRight } from "lucide-react";
+import { Globe, Bot, Palette, Search, ArrowLeft, ArrowUpRight, Check } from "lucide-react";
+import { services, profile } from "@/data/portfolio";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -13,115 +14,88 @@ export const Route = createFileRoute("/services")({
   component: ServicesPage,
 });
 
-const services = [
-  {
-    id: "web-design",
-    category: "Design & Development",
-    title: "Website Design & Development",
-    description: "Modern, responsive websites that convert visitors into customers — landing pages, business sites, e-commerce, real estate and EdTech platforms.",
-    icon: Globe,
-    features: ["Landing pages from ₦150k", "Full business websites from ₦200k", "E-commerce & platforms from ₦350k", "Mobile-first design", "Fast delivery"],
-  },
-  {
-    id: "ai-agents",
-    category: "AI & Automation",
-    title: "AI Agents & Chatbots",
-    description: "Intelligent bots that work for your business around the clock — handling customer inquiries, bookings, and support on WhatsApp, Telegram, or your website.",
-    icon: Bot,
-    features: ["WhatsApp bots", "Telegram bots", "Website chatbots", "Custom automation flows", "24/7 customer support"],
-  },
-  {
-    id: "seo",
-    category: "Marketing",
-    title: "SEO Services",
-    description: "Get your business found on Google. I optimise your website so Nigerian customers searching for what you offer actually find you.",
-    icon: Search,
-    features: ["Keyword research", "On-page optimisation", "Google Business setup", "Monthly reporting", "Local SEO for Nigeria"],
-  },
-  {
-    id: "graphics",
-    category: "Design",
-    title: "Graphics Design",
-    description: "Clean, professional visuals that make your brand look credible — logos, social media graphics, flyers, and brand identity.",
-    icon: Palette,
-    features: ["Logo design", "Brand identity", "Social media graphics", "Flyers & banners", "Business cards"],
-  },
+const capabilities = [
+  { icon: Globe, title: "Web Design & Development", desc: "Landing pages, business sites, e-commerce, real estate and EdTech platforms — built with React, TypeScript and modern tooling." },
+  { icon: Bot, title: "AI Agents & Automation", desc: "Custom AI assistants and workflow automation that handle support, content and ops — so you can focus on the business." },
+  { icon: Search, title: "SEO Setup & Strategy", desc: "On-page SEO, structured data, performance and content strategy to get you ranking on Google for your customers." },
+  { icon: Palette, title: "Brand & Graphics", desc: "Logos, social graphics and brand identity that match your website and look right on every channel." },
 ];
 
 function ServicesPage() {
+  const whatsappUrl = `https://wa.me/${profile.whatsapp}`;
   return (
-    <div className="min-h-screen bg-background pt-4">
+    <div className="min-h-screen bg-background">
       <Nav />
       <main className="mx-auto max-w-6xl px-4 py-16">
+        <Link to="/" className="inline-flex items-center gap-1 mono-label hover:text-primary">
+          <ArrowLeft className="h-3.5 w-3.5" /> Back
+        </Link>
 
-        <div className="mb-4">
-          <Link
-            to="/"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition"
-          >
-            <ArrowLeft className="h-4 w-4" /> Back home
-          </Link>
-        </div>
-
-        <div className="mb-16">
-          <p className="mb-2 text-sm font-medium uppercase tracking-wider text-primary">
-            What I offer
-          </p>
-          <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">
-            Services & Pricing
+        <div className="mt-6 mb-14 border-b border-border pb-8">
+          <div className="mono-label !text-primary"> Services · What I do</div>
+          <h1 className="mt-2 font-display text-5xl uppercase md:text-6xl">
+            Engineered <span className="text-primary">deliverables.</span>
           </h1>
-          <p className="mt-4 max-w-2xl text-muted-foreground">
-            Everything your business needs to look professional and grow online — websites, bots, SEO and design, all in one place.
+          <p className="mt-4 max-w-xl text-foreground/75">
+            Four core capabilities. Production-ready output. Most projects ship in 1–2 weeks.
           </p>
         </div>
 
+        {/* Capabilities */}
         <div className="grid gap-6 md:grid-cols-2">
-          {services.map((service) => {
-            const Icon = service.icon;
-            return (
-              <div
-                key={service.id}
-                className="group flex flex-col rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)] transition hover:-translate-y-1 hover:shadow-[var(--shadow-soft)]"
-              >
-                <div className="mb-6 flex items-start justify-between">
-                  <div className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-primary-soft text-primary">
-                    <Icon className="h-5 w-5" />
-                  </div>
-                  <span className="rounded-full border border-border px-3 py-1 text-xs text-muted-foreground">
-                    {service.category}
-                  </span>
-                </div>
+          {capabilities.map(({ icon: Icon, title, desc }, i) => (
+            <div key={title} className="relative border border-border bg-card p-6 md:p-8">
+              <span className="fig-tag">CAP · 0{i + 1}</span>
+              <Icon className="h-7 w-7 text-primary" />
+              <h3 className="mt-6 font-display text-xl uppercase">{title}</h3>
+              <p className="mt-2 text-sm text-foreground/75">{desc}</p>
+            </div>
+          ))}
+        </div>
 
-                <h2 className="text-xl font-semibold tracking-tight">
-                  {service.title}
-                </h2>
+        {/* Packages */}
+        <div className="mt-20">
+          <div className="mb-8 border-b border-border pb-6">
+            <div className="mono-label !text-primary"> Packages · Pricing</div>
+            <h2 className="mt-2 font-display text-3xl uppercase md:text-4xl">
+              Pick a <span className="text-primary">starting point.</span>
+            </h2>
+          </div>
 
-                <p className="mt-3 flex-1 text-sm text-muted-foreground leading-relaxed">
-                  {service.description}
-                </p>
-
-                <ul className="mt-6 space-y-2">
-                  {service.features.map((f) => (
-                    <li key={f} className="flex items-center gap-2 text-sm text-foreground/80">
-                      <span className="h-1.5 w-1.5 rounded-full bg-primary flex-shrink-0" />
-                      {f}
+          <div className="grid gap-6 md:grid-cols-3">
+            {services.map((s, i) => (
+              <div key={s.title} className="relative border border-border bg-card p-6">
+                <span className="fig-tag">PKG · 0{i + 1}</span>
+                <div className="mono-label">From</div>
+                <div className="mt-1 font-display text-3xl text-primary">{s.price}</div>
+                <h3 className="mt-5 font-display text-lg uppercase">{s.title}</h3>
+                <p className="mt-2 text-sm text-foreground/75">{s.description}</p>
+                <ul className="mt-5 space-y-2 border-t border-border pt-4">
+                  {s.features.map((f) => (
+                    <li key={f} className="flex items-start gap-2 font-mono text-xs text-foreground/80">
+                      <Check className="mt-0.5 h-3.5 w-3.5 text-primary flex-shrink-0" /> {f}
                     </li>
                   ))}
                 </ul>
-
-                <div className="mt-8 border-t border-border pt-6">
-                  <a
-                    href="/#contact"
-                    className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition hover:brightness-110"
-                  >
-                    Get a quote <ArrowUpRight className="h-4 w-4" />
-                  </a>
-                </div>
               </div>
-            );
-          })}
+            ))}
+          </div>
         </div>
 
+        {/* CTA */}
+        <div className="mt-20 border border-primary bg-card p-8 md:p-12">
+          <div className="grid items-center gap-6 md:grid-cols-[1.4fr_auto]">
+            <div>
+              <div className="mono-label !text-primary">Ready when you are</div>
+              <h2 className="mt-2 font-display text-3xl uppercase md:text-4xl">
+                Let's build something <span className="text-primary">that ships.</span>
+              </h2>
+            </div>
+            <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-yellow">
+              Start a Project <ArrowUpRight className="h-4 w-4" />
+            </a>
+          </div>
+        </div>
       </main>
       <Footer />
     </div>

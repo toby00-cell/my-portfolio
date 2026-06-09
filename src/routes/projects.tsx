@@ -16,72 +16,59 @@ export const Route = createFileRoute("/projects")({
 
 function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-background pt-4">
+    <div className="min-h-screen bg-background">
       <Nav />
-      <main className="mx-auto mt-20 max-w-6xl px-4 pb-32">
-        <div className="mb-12">
-          <p className="mb-2 text-sm font-medium uppercase tracking-wider text-primary">
-            All work
-          </p>
-          <h1 className="text-4xl font-semibold tracking-tight md:text-5xl">
-            Projects I've shipped
+      <main className="mx-auto max-w-6xl px-4 py-16">
+        <div className="mb-12 border-b border-border pb-8">
+          <div className="mono-label !text-primary"> Archive · All Work</div>
+          <h1 className="mt-2 font-display text-5xl uppercase md:text-6xl">
+            Projects I've <span className="text-primary">shipped.</span>
           </h1>
-          <p className="mt-4 max-w-xl text-muted-foreground">
+          <p className="mt-4 max-w-xl text-foreground/75">
             Every product I've designed and built — from landing pages to full platforms.
           </p>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((p, i) => (
-            <article
+            <a
               key={p.id}
-              className={`group relative overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-card)] transition hover:-translate-y-1 hover:shadow-[var(--shadow-soft)] md:p-8 ${
-                i === 0 ? "md:col-span-2" : ""
-              }`}
+              href={p.url}
+              target="_blank"
+              rel="noreferrer"
+              className={`group relative block border border-border bg-card transition hover:border-primary ${i === 0 ? "md:col-span-2" : ""}`}
             >
-              <div className="mb-6 aspect-[16/9] overflow-hidden rounded-2xl bg-primary-soft">
-                {p.image ? (
-                  <img src={p.image} alt={p.title} className="h-full w-full object-cover transition group-hover:scale-105" />
-                ) : (
-                  <div className="flex h-full w-full items-center justify-center text-sm text-primary/60">
-                    No screenshot yet
-                  </div>
+              <span className="fig-tag">PROJ · {String(i + 1).padStart(3, "0")}</span>
+              <div className={`overflow-hidden border-b border-border bg-surface ${i === 0 ? "aspect-[21/9]" : "aspect-[16/10]"}`}>
+                {p.image && (
+                  <img src={p.image} alt={p.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                 )}
               </div>
-
-              <div className="flex flex-wrap items-center gap-2 text-xs">
-                <span className="rounded-full bg-primary-soft px-3 py-1 font-medium text-primary">
-                  {p.category}
-                </span>
-                <span className="text-muted-foreground">{p.year}</span>
-              </div>
-
-              <h2 className="mt-4 text-2xl font-semibold tracking-tight md:text-3xl">
-                {p.title}
-              </h2>
-              <p className="mt-1 text-sm text-muted-foreground">{p.tagline}</p>
-              <p className="mt-4 text-base text-foreground/80">{p.description}</p>
-
-              <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
-                <div className="flex flex-wrap gap-2">
-                  {p.tags.map((t) => (
-                    <span key={t} className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted-foreground">
-                      {t}
-                    </span>
-                  ))}
+              <div className="p-6 md:p-8">
+                <div className="flex items-center justify-between">
+                  <span className="mono-label !text-primary">{p.category}</span>
+                  <span className="mono-label">{p.year}</span>
                 </div>
-                {p.url && (
-                  <a
-                    href={p.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
-                  >
-                    Visit <ArrowUpRight className="h-4 w-4" />
-                  </a>
-                )}
+                <h2 className="mt-3 font-display text-2xl uppercase md:text-3xl">{p.title}</h2>
+                <p className="mt-2 text-sm text-foreground/75">{p.tagline}</p>
+                <p className="mt-4 text-foreground/80">{p.description}</p>
+
+                <div className="mt-6 flex flex-wrap items-center justify-between gap-4 border-t border-border pt-4">
+                  <div className="flex flex-wrap gap-2">
+                    {p.tags.map((t) => (
+                      <span key={t} className="border border-border px-2 py-1 font-mono text-[0.65rem] text-muted-foreground">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  {p.url && (
+                    <span className="inline-flex items-center gap-1 mono-label !text-primary">
+                      Visit <ArrowUpRight className="h-3.5 w-3.5" />
+                    </span>
+                  )}
+                </div>
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </main>

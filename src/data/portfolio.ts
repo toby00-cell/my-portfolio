@@ -18,18 +18,6 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    id: "naijathreads",
-    title: "NaijaThreads",
-    category: "E-commerce",
-    tagline: "Nigerian fashion e-commerce store",
-    description:
-      "A conversion-focused online store built for Nigerian fashion brands — product listings, cart and checkout flows designed to feel premium and load fast on mobile.",
-    image: naijathreads,
-    url: "https://naijathreads.name.ng/",
-    tags: ["Product Catalog", "Cart & Checkout", "Mobile-first"],
-    year: "2026",
-  },
-  {
     id: "t-homes",
     title: "T Homes",
     category: "Real Estate",
@@ -54,18 +42,6 @@ export const projects: Project[] = [
     year: "2026",
   },
   {
-    id: "farmpulse",
-    title: "FarmPulse Nigeria",
-    category: "Business",
-    tagline: "Independent agricultural news platform",
-    description:
-      "An editorial news platform covering Nigerian agriculture — agritech, livestock, markets, climate and policy. Built for farmers, agribusiness owners and food-system professionals.",
-    image: farmpulse,
-    url: "https://farmpulse-rosy.vercel.app",
-    tags: ["News & Editorial", "Content Platform", "Mobile-first"],
-    year: "2026",
-  },
-  {
     id: "ninety-minds",
     title: "Ninety Minds",
     category: "Business",
@@ -77,6 +53,31 @@ export const projects: Project[] = [
     tags: ["Sports Tech", "Talent Scouting", "Wellness"],
     year: "2026",
   },
+  {
+    id: "naijathreads",
+    title: "NaijaThreads",
+    category: "E-commerce",
+    tagline: "Nigerian fashion e-commerce store",
+    description:
+      "A conversion-focused online store built for Nigerian fashion brands — product listings, cart and checkout flows designed to feel premium and load fast on mobile.",
+    image: naijathreads,
+    url: "https://naijathreads.name.ng/",
+    tags: ["Product Catalog", "Cart & Checkout", "Mobile-first"],
+    year: "2026",
+  },
+  {
+    id: "farmpulse",
+    title: "FarmPulse Nigeria",
+    category: "Business",
+    tagline: "Independent agricultural news platform",
+    description:
+      "An editorial news platform covering Nigerian agriculture — agritech, livestock, markets, climate and policy. Built for farmers, agribusiness owners and food-system professionals.",
+    image: farmpulse,
+    url: "https://farmpulse-rosy.vercel.app",
+    tags: ["News & Editorial", "Content Platform", "Mobile-first"],
+    year: "2026",
+  },
+  
 ];
 
 export const services = [

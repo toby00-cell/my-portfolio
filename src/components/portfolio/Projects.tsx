@@ -1,87 +1,71 @@
 import { projects } from "@/data/portfolio";
 import { ArrowUpRight } from "lucide-react";
-
-const FEATURED_IDS = ["naijathreads", "learnbridge", "ninety-minds"];
-const featured = FEATURED_IDS.map((id) => projects.find((p) => p.id === id)!);
+import { Link } from "@tanstack/react-router";
 
 export function Projects() {
+  const list = projects.slice(0, 4);
   return (
-    <section id="projects" className="mx-auto mt-32 max-w-6xl px-4">
-      <div className="mb-12 flex flex-wrap items-end justify-between gap-4">
-        <div>
-          <p className="mb-2 text-sm font-medium uppercase tracking-wider text-primary">
-            Selected work
-          </p>
-          <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
-            Projects I've shipped
-          </h2>
+    <section id="projects" className="border-b border-border">
+      <div className="mx-auto max-w-6xl px-4 py-20">
+        <div className="mb-12 flex items-end justify-between gap-6 border-b border-border pb-6">
+          <div>
+            <div className="mono-label !text-primary"> 02 · Selected Work</div>
+            <h2 className="mt-2 font-display text-4xl uppercase md:text-5xl">
+              Shipped, not <span className="text-primary">prototyped.</span>
+            </h2>
+          </div>
+          <Link to="/projects" className="hidden md:inline-flex mono-label hover:text-primary">
+            View all →
+          </Link>
         </div>
-        <p className="max-w-sm text-muted-foreground">
-          A few products I've designed and built — from real estate to e-commerce and learning platforms.
-        </p>
-      </div>
 
-      <div className="grid gap-6 md:grid-cols-2">
-        {featured.map((p, i) => (
-          <article
-            key={p.id}
-            className={`group relative overflow-hidden rounded-3xl border border-border bg-card p-6 shadow-[var(--shadow-card)] transition hover:-translate-y-1 hover:shadow-[var(--shadow-soft)] md:p-8 ${
-              i === 0 ? "md:col-span-2" : ""
-            }`}
-          >
-            <div className="mb-6 aspect-[16/9] overflow-hidden rounded-2xl bg-primary-soft">
-              {p.image ? (
-                <img src={p.image} alt={p.title} className="h-full w-full object-cover transition group-hover:scale-105" />
-              ) : (
-                <div className="flex h-full w-full items-center justify-center text-sm text-primary/60">
-                  Add a screenshot in src/data/portfolio.ts
-                </div>
-              )}
-            </div>
-
-            <div className="flex flex-wrap items-center gap-2 text-xs">
-              <span className="rounded-full bg-primary-soft px-3 py-1 font-medium text-primary">
-                {p.category}
-              </span>
-              <span className="text-muted-foreground">{p.year}</span>
-            </div>
-
-            <h3 className="mt-4 text-2xl font-semibold tracking-tight md:text-3xl">
-              {p.title}
-            </h3>
-            <p className="mt-1 text-sm text-muted-foreground">{p.tagline}</p>
-            <p className="mt-4 text-base text-foreground/80">{p.description}</p>
-
-            <div className="mt-6 flex flex-wrap items-center justify-between gap-4">
-              <div className="flex flex-wrap gap-2">
-                {p.tags.map((t) => (
-                  <span key={t} className="rounded-full border border-border bg-surface px-3 py-1 text-xs text-muted-foreground">
-                    {t}
-                  </span>
-                ))}
+        <div className="grid gap-6 md:grid-cols-2">
+          {list.map((p, i) => (
+            <a
+              key={p.id}
+              href={p.url}
+              target="_blank"
+              rel="noreferrer"
+              className="group relative block border border-border bg-card transition hover:border-primary"
+            >
+              <span className="fig-tag">PROJ · {String(i + 1).padStart(3, "0")}</span>
+              <div className="aspect-[16/10] overflow-hidden border-b border-border bg-surface">
+                {p.image && (
+                  <img
+                    src={p.image}
+                    alt={p.title}
+                    className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                  />
+                )}
               </div>
-              {p.url && (
-                <a
-                  href={p.url}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline"
-                >
-                  Visit <ArrowUpRight className="h-4 w-4" />
-                </a>
-              )}
-            </div>
-          </article>
-        ))}
-      </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between">
+                  <span className="mono-label !text-primary">{p.category}</span>
+                  <span className="mono-label">{p.year}</span>
+                </div>
+                <h3 className="mt-3 font-display text-2xl uppercase">{p.title}</h3>
+                <p className="mt-2 text-sm text-foreground/75">{p.tagline}</p>
 
-      <div className="mt-10 flex justify-center">
-        <a
-          href="/projects"
-          className="inline-flex items-center gap-2 rounded-full border border-border px-6 py-3 text-sm font-medium text-foreground transition hover:bg-card"
-        >
-          See all projects <ArrowUpRight className="h-4 w-4" />
-        </a>
+                <div className="mt-5 flex items-center justify-between border-t border-border pt-4">
+                  <div className="flex flex-wrap gap-2">
+                    {p.tags.slice(0, 2).map((t) => (
+                      <span key={t} className="border border-border px-2 py-1 font-mono text-[0.65rem] text-muted-foreground">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                  <span className="inline-flex items-center gap-1 mono-label !text-primary">
+                    Visit <ArrowUpRight className="h-3.5 w-3.5" />
+                  </span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        <div className="mt-10 flex justify-center md:hidden">
+          <Link to="/projects" className="btn-outline">All Projects</Link>
+        </div>
       </div>
     </section>
   );

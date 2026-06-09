@@ -1,14 +1,6 @@
 import { Github, Twitter, Linkedin } from "lucide-react";
 import { profile } from "@/data/portfolio";
 
-const footerLinks = [
-  { label: "Home", href: "/" },
-  { label: "Projects", href: "/#projects" },
-  { label: "Services", href: "/services" },
-  { label: "Blog", href: "/#blog" },
-  { label: "Contact", href: "/#contact" },
-];
-
 const socials = [
   { icon: Github, href: "https://github.com/toby00-cell", label: "GitHub" },
   { icon: Twitter, href: "https://twitter.com/brightjoel", label: "Twitter" },
@@ -17,44 +9,29 @@ const socials = [
 
 export function Footer() {
   return (
-    <footer className="mx-auto mt-24 max-w-6xl px-4 pb-10">
-      <div className="border-t border-border pt-10">
-
-        {/* Top row */}
-        <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
-
-          {/* Brand + tagline */}
-          <div className="max-w-sm">
-            <p className="text-base font-semibold text-foreground">
-              Tobi
-            </p>
-            <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
-              Launch beautiful, fast websites and AI-powered tools for your Nigerian business — in under 2 weeks.
-            </p>
-          </div>
-
-          {/* Nav links */}
-          <div className="flex flex-wrap gap-x-6 gap-y-2">
-            {footerLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-sm text-muted-foreground transition hover:text-foreground"
-              >
-                {link.label}
-              </a>
-            ))}
+    <footer className="border-t border-border bg-background">
+      <div className="mx-auto grid max-w-6xl gap-6 px-4 py-10 md:grid-cols-3">
+        <div>
+          <div className="flex items-center gap-3">
+            <div className="flex h-9 w-9 items-center justify-center bg-primary font-display text-sm text-primary-foreground">
+              BJ
+            </div>
+            <div>
+              <div className="font-display text-sm">Bright Joel</div>
+              <div className="mono-label">{profile.location}</div>
+            </div>
           </div>
         </div>
 
-        {/* Bottom row */}
-        <div className="mt-8 flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Tobi. All rights reserved.
-          </p>
+        <div className="md:text-center">
+          <div className="mono-label">Status</div>
+          <div className="mt-1 font-mono text-sm text-primary">● Available for projects</div>
+        </div>
 
-          {/* Socials */}
-          <div className="flex items-center gap-3">
+        <div className="md:text-right">
+          <div className="mono-label">© {new Date().getFullYear()} — All systems shipped</div>
+          <div className="mt-1 font-mono text-xs text-muted-foreground">v.2026.1</div>
+          <div className="mt-3 flex items-center gap-3 md:justify-end">
             {socials.map(({ icon: Icon, href, label }) => (
               <a
                 key={label}
@@ -62,14 +39,13 @@ export function Footer() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label={label}
-                className="inline-flex items-center justify-center rounded-full border border-border p-2 text-muted-foreground transition hover:border-primary hover:text-primary"
+                className="inline-flex items-center justify-center border border-border p-2 text-muted-foreground transition hover:border-primary hover:text-primary"
               >
                 <Icon className="h-4 w-4" />
               </a>
             ))}
           </div>
         </div>
-
       </div>
     </footer>
   );

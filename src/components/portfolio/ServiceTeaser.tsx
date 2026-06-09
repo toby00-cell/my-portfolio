@@ -1,66 +1,64 @@
 import { Link } from "@tanstack/react-router";
-import { Globe, Bot, Search, Palette, ArrowUpRight } from "lucide-react";
+import { ArrowRight, Globe, Bot, Code, GitBranch, Database, Wrench } from "lucide-react";
 
-const services = [
+const items = [
   {
     icon: Globe,
-    label: "Website Design & Development",
-    detail: "Fast, mobile-first sites that convert",
+    label: "Website & App Development",
+    description: "Full-stack web apps, landing pages and business sites — fast, scalable and built to last.",
   },
   {
     icon: Bot,
-    label: "AI Agents & Chatbots",
-    detail: "24/7 bots for WhatsApp & your site",
+    label: "AI Agents & Automation",
+    description: "Custom AI agents and automated workflows that handle repetitive tasks and scale your operations.",
   },
   {
-    icon: Search,
-    label: "SEO Services",
-    detail: "Get found on Google by local customers",
+    icon: Database,
+    label: "Backend & API Development",
+    description: "REST APIs, database design and server-side logic — clean architecture, built for production.",
   },
   {
-    icon: Palette,
-    label: "Graphics Design",
-    detail: "Logos, branding & social media visuals",
+    icon: Wrench,
+    label: "Maintenance & Optimization",
+    description: "Bug fixes, performance tuning and feature additions for existing codebases — fast turnaround.",
   },
 ];
 
 export function ServiceTeaser() {
   return (
-    <section className="mx-auto mt-32 max-w-6xl px-4">
-      <div className="rounded-3xl border border-border bg-card p-8 shadow-[var(--shadow-card)] md:p-12">
-        <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+    <section className="border-b border-border bg-surface">
+      <div className="mx-auto max-w-6xl px-4 py-20">
+        <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <p className="mb-2 text-sm font-medium uppercase tracking-wider text-primary">
-              What I do
-            </p>
-            <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
-              Services I offer
+            <div className="mono-label !text-primary">§ 03 · Services</div>
+            <h2 className="mt-2 font-display text-4xl uppercase md:text-5xl">
+              What I <span className="text-primary">build for you.</span>
             </h2>
-            <p className="mt-3 max-w-md text-muted-foreground">
-              From websites to AI bots — everything your business needs to grow online.
+            <p className="mt-4 max-w-md text-foreground/75">
+              From landing pages that convert to AI agents that scale your ops —
+              production-ready deliverables, shipped in days, not months.
             </p>
           </div>
-          <Link
-            to="/services"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow-[var(--shadow-soft)] transition hover:brightness-110 flex-shrink-0"
-          >
-            View pricing <ArrowUpRight className="h-4 w-4" />
+          <Link to="/services" className="btn-yellow self-start md:self-auto">
+            See Full Services <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
 
-        <div className="mt-8 grid grid-cols-2 gap-4 md:grid-cols-4">
-          {services.map(({ icon: Icon, label, detail }) => (
+        <div className="grid grid-cols-1 gap-px border border-border bg-border sm:grid-cols-2 md:grid-cols-3">
+          {items.map(({ icon: Icon, label, description }, i) => (
             <div
               key={label}
-              className="flex flex-col items-start gap-3 rounded-2xl bg-primary-soft/50 p-5"
+              className="group relative bg-card p-6 transition-colors hover:bg-surface"
             >
-              <div className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                <Icon className="h-4 w-4" />
+              <div className="flex items-start justify-between">
+                <div className="flex h-10 w-10 items-center justify-center border border-border bg-surface text-primary transition-colors group-hover:border-primary">
+                  <Icon className="h-5 w-5" />
+                </div>
+                <span className="mono-label">0{i + 1}</span>
               </div>
-              <div>
-                <p className="text-sm font-medium leading-snug">{label}</p>
-                <p className="mt-1 text-xs text-muted-foreground leading-snug">{detail}</p>
-              </div>
+
+              <div className="mt-5 font-display text-base uppercase">{label}</div>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{description}</p>
             </div>
           ))}
         </div>

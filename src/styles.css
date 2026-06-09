@@ -40,6 +40,7 @@
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
+/* ── DARK MODE (default) ── */
 :root {
   --radius: 0px;
   --background: oklch(0.13 0.005 250);
@@ -49,7 +50,7 @@
   --card-foreground: oklch(0.97 0 0);
   --popover: oklch(0.17 0.008 250);
   --popover-foreground: oklch(0.97 0 0);
-  --primary: oklch(0.92 0.17 95);            /* warm yellow */
+  --primary: oklch(0.92 0.17 95);
   --primary-foreground: oklch(0.13 0.005 250);
   --secondary: oklch(0.2 0.008 250);
   --secondary-foreground: oklch(0.97 0 0);
@@ -63,6 +64,31 @@
   --input: oklch(0.22 0.008 250);
   --ring: oklch(0.92 0.17 95);
   --grid: oklch(0.2 0.008 250 / 0.55);
+}
+
+/* ── LIGHT MODE ── */
+:root:not(.dark) {
+  --background: oklch(0.98 0.002 250);
+  --foreground: oklch(0.13 0.005 250);
+  --surface: oklch(0.94 0.003 250);
+  --card: oklch(0.96 0.003 250);
+  --card-foreground: oklch(0.13 0.005 250);
+  --popover: oklch(0.96 0.003 250);
+  --popover-foreground: oklch(0.13 0.005 250);
+  --primary: oklch(0.75 0.17 75);
+  --primary-foreground: oklch(0.98 0 0);
+  --secondary: oklch(0.92 0.004 250);
+  --secondary-foreground: oklch(0.13 0.005 250);
+  --muted: oklch(0.92 0.004 250);
+  --muted-foreground: oklch(0.45 0.01 250);
+  --accent: oklch(0.75 0.17 75);
+  --accent-foreground: oklch(0.98 0 0);
+  --destructive: oklch(0.55 0.22 25);
+  --destructive-foreground: oklch(0.98 0 0);
+  --border: oklch(0.82 0.006 250);
+  --input: oklch(0.88 0.005 250);
+  --ring: oklch(0.75 0.17 75);
+  --grid: oklch(0.82 0.006 250 / 0.55);
 }
 
 @layer base {

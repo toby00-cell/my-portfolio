@@ -10,9 +10,12 @@ export type Project = {
   category: "E-commerce" | "Real Estate" | "EdTech" | "Business" | "Landing Page";
   tagline: string;
   description: string;
+  problem: string;
+  solution: string;
   image?: string;
   url?: string;
   tags: string[];
+  stack: string[];
   year: string;
 };
 
@@ -24,9 +27,14 @@ export const projects: Project[] = [
     tagline: "Property listings & agency website",
     description:
       "A polished real estate platform for browsing properties, agent listings and direct inquiries — built for trust, speed and a clean buyer experience.",
+    problem:
+      "The client was running their property business entirely through WhatsApp and phone calls. Potential buyers had no way to browse listings, filter by budget or verify the agency's credibility before making contact.",
+    solution:
+      "Built a full property listings platform with search and filter by location, price and type. Added agent profiles, a direct inquiry system and a fast mobile-first design that builds trust before the first call.",
     image: thomes,
     url: "https://t-homes.name.ng",
     tags: ["Listings", "Search & Filters", "Agent Profiles"],
+    stack: ["React", "TypeScript", "Node.js", "Supabase", "Tailwind"],
     year: "2026",
   },
   {
@@ -36,9 +44,14 @@ export const projects: Project[] = [
     tagline: "Tech skills learning platform",
     description:
       "An EdTech platform built for students learning real tech skills — course management, clean UI and a distraction-free learning experience.",
+    problem:
+      "Students learning tech skills in Nigeria were scattered across YouTube, Telegram groups and PDFs with no structured learning path or way to track progress.",
+    solution:
+      "Built a focused learning platform with structured courses, a student dashboard for tracking progress and a clean distraction-free UI. Designed to feel fast and professional on low-end devices and slow connections.",
     image: learnbridge,
     url: "https://techbridge.naijathreads.workers.dev/",
     tags: ["Courses", "Student Dashboard", "Clean UX"],
+    stack: ["React", "TypeScript", "Supabase", "Tailwind"],
     year: "2026",
   },
   {
@@ -48,9 +61,14 @@ export const projects: Project[] = [
     tagline: "Grassroots football talent & wellness platform",
     description:
       "A platform for scouting grassroots Nigerian football talent and supporting player wellness — featured players, wellness hub, club management and talent discovery.",
+    problem:
+      "Talented grassroots Nigerian footballers had no digital presence or way to get noticed by scouts and clubs. Discovery happened only through physical connections and word of mouth.",
+    solution:
+      "Built a talent discovery platform with player profiles, a wellness hub, club management tools and a scout-facing interface. Players get a digital identity; clubs get a structured way to find and track talent.",
     image: ninetyminds,
     url: "https://ninetyminds.naijathreads.workers.dev",
     tags: ["Sports Tech", "Talent Scouting", "Wellness"],
+    stack: ["React", "TypeScript", "Node.js", "PostgreSQL", "Tailwind"],
     year: "2026",
   },
   {
@@ -60,9 +78,14 @@ export const projects: Project[] = [
     tagline: "Nigerian fashion e-commerce store",
     description:
       "A conversion-focused online store built for Nigerian fashion brands — product listings, cart and checkout flows designed to feel premium and load fast on mobile.",
+    problem:
+      "The brand was selling exclusively through Instagram DMs — a slow, manual process with no cart, no checkout and no way to scale. Orders got lost and customers dropped off.",
+    solution:
+      "Built a full e-commerce store with product catalog, cart, checkout flow and order management. Optimised heavily for mobile since over 90% of their customers shop on phones. Checkout to order takes under 2 minutes.",
     image: naijathreads,
     url: "https://naijathreads.name.ng/",
     tags: ["Product Catalog", "Cart & Checkout", "Mobile-first"],
+    stack: ["React", "TypeScript", "Node.js", "Postgres", "Tailwind"],
     year: "2026",
   },
   {
@@ -72,12 +95,16 @@ export const projects: Project[] = [
     tagline: "Independent agricultural news platform",
     description:
       "An editorial news platform covering Nigerian agriculture — agritech, livestock, markets, climate and policy. Built for farmers, agribusiness owners and food-system professionals.",
+    problem:
+      "Nigerian agricultural news was fragmented across unreliable blogs, WhatsApp forwards and general news sites that buried farming content. There was no dedicated, professional source for the agribusiness community.",
+    solution:
+      "Built a clean editorial platform with category-based browsing, a fast reading experience and a mobile-first design. Structured for SEO so agribusiness professionals find it through Google searches.",
     image: farmpulse,
     url: "https://farmpulse-rosy.vercel.app",
     tags: ["News & Editorial", "Content Platform", "Mobile-first"],
+    stack: ["React", "TypeScript", "Tailwind", "Vercel"],
     year: "2026",
   },
-  
 ];
 
 export const services = [
@@ -105,13 +132,13 @@ export const services = [
 ];
 
 export const profile = {
-  name: "Bright Joel",                  // ← add your name
-  role: "Software Developer & Web Designer", // ← add your role
+  name: "Bright Joel",
+  role: "Software Developer & Web Designer",
   blurb:
     "I help Nigerian founders and small businesses launch beautiful, fast websites — from landing pages to e-commerce, real estate and EdTech platforms.",
   location: "Abuja, Nigeria",
-  email: "joelbright508@gmail.com",         // ← add your email
-  whatsapp: "2349040522602",          // ← add your number (no +)
+  email: "joelbright508@gmail.com",
+  whatsapp: "2349040522602",
   avatar: undefined as string | undefined,
   stats: [
     { label: "Projects shipped", value: "5+" },
@@ -120,8 +147,6 @@ export const profile = {
     { label: "Available", value: "Now" },
   ],
 };
-
-// Replace the blogPosts section at the bottom of your portfolio.ts with this
 
 export type BlogPost = {
   id: string;

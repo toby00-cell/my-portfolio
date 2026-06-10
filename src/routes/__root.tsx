@@ -104,7 +104,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <head>
         <HeadContent />
         <script
@@ -112,8 +112,8 @@ function RootShell({ children }: { children: ReactNode }) {
             __html: `
               (function() {
                 const theme = localStorage.getItem("theme");
-                if (theme === "light") {
-                  document.documentElement.classList.remove("dark");
+                if (theme === "dark") {
+                  document.documentElement.classList.add("dark");
                 }
               })();
             `,

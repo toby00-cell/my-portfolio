@@ -14,7 +14,7 @@ export function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <div className="flex h-9 w-9 items-center justify-center bg-primary font-display text-sm text-primary-foreground">
-              BJ
+              T
             </div>
             <div>
               <div className="font-display text-sm">Bright Joel</div>

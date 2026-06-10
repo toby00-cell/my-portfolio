@@ -38,7 +38,7 @@ export function Contact() {
             </div>
             <div className="mt-6 border-t border-border pt-4">
               <div className="mono-label">Response time</div>
-              <div className="mt-1 font-display text-2xl text-primary">≤ 24 hrs</div>
+              <div className="mt-1 font-display text-2xl text-primary">≤ 12 hrs</div>
             </div>
           </div>
         </div>

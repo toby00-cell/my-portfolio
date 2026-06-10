@@ -15,7 +15,7 @@ export function Nav() {
     if (typeof window === "undefined") return true;
     const saved = localStorage.getItem("theme");
     if (saved) return saved === "dark";
-    return true;
+    return false;
   });
 
   useEffect(() => {
@@ -28,7 +28,7 @@ export function Nav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
         <Link to="/" className="flex items-center gap-3">
           <div className="flex h-9 w-9 items-center justify-center bg-primary font-display text-sm text-primary-foreground">
-            BJ
+            T
           </div>
           <div className="leading-tight">
             <div className="font-display text-sm tracking-wide">Bright Joel</div>

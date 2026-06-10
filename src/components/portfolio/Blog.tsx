@@ -22,7 +22,7 @@ export function Blog() {
               } hover:bg-surface transition-colors`}
             >
               <div className="space-y-1">
-                <div className="mono-label !text-primary">№ {String(i + 1).padStart(3, "0")}</div>
+                <div className="mono-label !text-primary"> {String(i + 1).padStart(3, "0")}</div>
                 <div className="mono-label">{post.date}</div>
                 <div className="mono-label">{post.readTime}</div>
               </div>

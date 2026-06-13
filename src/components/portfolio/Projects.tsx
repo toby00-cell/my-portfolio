@@ -12,7 +12,7 @@ export function Projects() {
       <div className="mx-auto max-w-6xl px-4 py-20">
         <div className="mb-12 flex items-end justify-between gap-6 border-b border-border pb-6">
           <div>
-            <div className="mono-label !text-primary">§ 02 · Selected Work</div>
+            <div className="mono-label !text-primary"> 02 · Selected Work</div>
             <h2 className="mt-2 font-display text-4xl uppercase md:text-5xl">
               Shipped, not <span className="text-primary">prototyped.</span>
             </h2>

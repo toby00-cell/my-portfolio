@@ -30,7 +30,7 @@ export function ServiceTeaser() {
       <div className="mx-auto max-w-6xl px-4 py-20">
         <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div>
-            <div className="mono-label !text-primary">§ 03 · Services</div>
+            <div className="mono-label !text-primary"> 03 · Services</div>
             <h2 className="mt-2 font-display text-4xl uppercase md:text-5xl">
               What I <span className="text-primary">build for you.</span>
             </h2>

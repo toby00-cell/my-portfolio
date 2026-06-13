@@ -119,14 +119,14 @@ export const services = [
     title: "Full Business Website",
     description:
       "A complete multi-page website giving your business a credible online home — about, services, contact and more.",
-    price: "₦200k",
+    price: "₦300k",
     features: ["Up to 6 pages", "CMS-ready", "SEO setup", "Custom design"],
   },
   {
     title: "E-commerce / Real Estate / EdTech",
     description:
       "Product catalogs, property listings or course platforms — robust web apps tailored to your business model.",
-    price: "₦300k",
+    price: "₦400k",
     features: ["Custom features", "Admin dashboard", "Payments-ready", "Scalable"],
   },
 ];

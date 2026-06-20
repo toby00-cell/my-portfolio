@@ -7,7 +7,7 @@ export function Blog() {
     <section id="blog" className="border-b border-border">
       <div className="mx-auto max-w-6xl px-4 py-20">
         <div className="mb-12 border-b border-border pb-6">
-          <div className="mono-label !text-primary"> 04 · Writing</div>
+          <div className="mono-label !text-primary"> Writing</div>
           <h2 className="mt-2 font-display text-4xl uppercase md:text-5xl">
             Field <span className="text-primary">notes.</span>
           </h2>

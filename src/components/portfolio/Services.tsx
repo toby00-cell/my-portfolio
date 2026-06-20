@@ -6,7 +6,7 @@ export function Services() {
     <section id="services" className="border-b border-border">
       <div className="mx-auto max-w-6xl px-4 py-20">
         <div className="mb-12 border-b border-border pb-6">
-          <div className="mono-label !text-primary"> 03 · Services</div>
+          <div className="mono-label !text-primary"> Services</div>
           <h2 className="mt-2 font-display text-4xl uppercase md:text-5xl">
             Engineered <span className="text-primary">deliverables.</span>
           </h2>

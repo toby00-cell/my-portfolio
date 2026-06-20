@@ -42,7 +42,7 @@ export function Experience() {
       <div className="mx-auto max-w-6xl px-4 py-20">
         <div className="mb-12 flex items-end justify-between gap-6 border-b border-border pb-6">
           <div>
-            <div className="mono-label !text-primary">§ 02 · Experience</div>
+            <div className="mono-label !text-primary"> Experience</div>
             <h2 className="mt-2 font-display text-4xl uppercase md:text-5xl">
               Where the work <span className="text-primary">happened.</span>
             </h2>

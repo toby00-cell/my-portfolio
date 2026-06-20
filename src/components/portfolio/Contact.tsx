@@ -8,7 +8,7 @@ export function Contact() {
       <div className="mx-auto max-w-6xl px-4 py-20">
         <div className="grid items-start gap-12 md:grid-cols-[1.2fr_1fr]">
           <div>
-            <div className="mono-label !text-primary"> 05 · Get in touch</div>
+            <div className="mono-label !text-primary"> Get in touch</div>
             <h2 className="mt-2 font-display text-5xl uppercase leading-[0.95] md:text-6xl">
               Got a project?
               <br />

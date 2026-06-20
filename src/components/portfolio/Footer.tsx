@@ -30,7 +30,7 @@ export function Footer() {
 
         <div className="md:text-right">
           <div className="mono-label">© {new Date().getFullYear()} — All systems shipped</div>
-          <div className="mt-1 font-mono text-xs text-muted-foreground">v.2026.1</div>
+          <div className="mt-1 font-mono text-xs text-muted-foreground">2026</div>
           <div className="mt-3 flex items-center gap-3 md:justify-end">
             {socials.map(({ icon: Icon, href, label }) => (
               <a

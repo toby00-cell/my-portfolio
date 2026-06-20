@@ -12,7 +12,7 @@ const links = [
 export function Nav() {
   const [open, setOpen] = useState(false);
   const [dark, setDark] = useState(() => {
-    if (typeof window === "undefined") return true;
+    if (typeof window === "undefined") return false;
     const saved = localStorage.getItem("theme");
     if (saved) return saved === "dark";
     return false;
@@ -42,6 +42,14 @@ export function Nav() {
               {l.label}
             </a>
           ))}
+          
+          <a
+            href="/Bright_Joel_Resume.pdf"
+            download
+            className="mono-label hover:text-primary transition-colors"
+          >
+            Resume ↓
+          </a>
           <button
             onClick={() => setDark(!dark)}
             aria-label="Toggle theme"
@@ -58,6 +66,7 @@ export function Nav() {
             onClick={() => setDark(!dark)}
             aria-label="Toggle theme"
             className="border border-border p-2 text-muted-foreground transition hover:border-primary hover:text-primary"
+            suppressHydrationWarning
           >
             {dark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
           </button>
@@ -79,6 +88,14 @@ export function Nav() {
                 {l.label}
               </a>
             ))}
+            <a
+              href="/Bright_Joel_Resume.pdf"
+              download
+              className="py-3 mono-label hover:text-primary transition-colors"
+              onClick={() => setOpen(false)}
+            >
+              Resume ↓
+            </a>
             <a href="/#contact" className="btn-yellow mt-3 justify-center" onClick={() => setOpen(false)}>
               Hire Me
             </a>

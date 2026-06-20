@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Nav } from "@/components/portfolio/Nav";
 import { Hero } from "@/components/portfolio/Hero";
+import { Experience } from "@/components/portfolio/Experience";
 import { Projects } from "@/components/portfolio/Projects";
 import { Blog } from "@/components/portfolio/Blog";
 import { Contact } from "@/components/portfolio/Contact";
@@ -10,9 +11,9 @@ import { ServiceTeaser } from "@/components/portfolio/ServiceTeaser";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Bright Joel — Web Engineer & Designer" },
+      { title: "Bright Joel — Software Engineer" },
       { name: "description", content: "Production-grade websites for Nigerian founders — landing pages, e-commerce, real estate and EdTech, engineered for speed and conversion." },
-      { property: "og:title", content: "Bright Joel — Web Engineer & Designer" },
+      { property: "og:title", content: "Bright Joel — Software Engineer" },
       { property: "og:description", content: "Landing pages, business sites, e-commerce, real estate and EdTech — engineered for speed and conversion." },
     ],
   }),
@@ -25,6 +26,7 @@ function Index() {
       <Nav />
       <main>
         <Hero />
+        <Experience />
         <Projects />
         <ServiceTeaser />
         <Blog />

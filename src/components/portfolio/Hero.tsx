@@ -1,6 +1,6 @@
 import { profile } from "@/data/portfolio";
 import profilePic from "@/assets/profile.png";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, FileDown } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const skills = [
@@ -95,6 +95,9 @@ export function Hero() {
             </a>
             <a href="#projects" className="btn-outline">
               View Projects
+            </a>
+            <a href="/Bright_Joel_Resume.pdf" download className="btn-outline">
+              Resume <FileDown className="h-4 w-4" />
             </a>
           </div>
 

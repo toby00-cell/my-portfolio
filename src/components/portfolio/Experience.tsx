@@ -3,7 +3,7 @@ import { Link } from "@tanstack/react-router";
 
 const experience = [
   {
-    title: "Frontend Developer Intern",
+    title: "Frontend Developer",
     company: "Zeenom Tech",
     location: "Remote",
     period: "Apr 2026 — Present",

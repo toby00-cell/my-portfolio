@@ -5,7 +5,8 @@ import { useEffect, useRef, useState } from "react";
 
 const skills = [
   "TypeScript", "React", "Node.js", "Python",
-  "C# / .NET", "Postgres", "Supabase", "MongoDB",
+  "C# / .NET", "Postgres", "Supabase", "MongoDB", "MYSQL",
+  "Redis", "Docker", "Git", "AWS" 
 ];
 
 function useCountUp(target: string, duration = 1500) {

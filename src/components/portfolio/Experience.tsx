@@ -8,31 +8,39 @@ const experience = [
     location: "Remote",
     period: "Apr 2026 to Present",
     description:
-      "Working on frontend web development tasks and contributing to user interface work across multiple projects. Stack includes JavaScript, Git and modern frontend tooling.",
+      "I lead frontend decisions and turn designs into React and TypeScript apps that real users depend on. I care about performance, accessibility and reliable API integrations, so the interface stays in sync even on busy workflows.",
   },
   {
-    title: "AI & Machine Learning Intern",
+    title: "Software & Machine Learning Engineer",
     company: "Techy Jaunt",
     location: "Remote",
     period: "Apr 2026 to Present",
     description:
-      "Trained on data analysis and visualization using NumPy, Pandas, Matplotlib and Seaborn, strengthened my statistics and probability foundation, and built and deployed real machine learning models, covering the full pipeline from data to production.",
+      "I take machine learning models out of notebooks and into working software. That means Python data preprocessing, model integration and automation that product features can build on.",
   },
   {
-    title: "Python Developer",
-    company: "HiiT Plc",
+    title: "Software Engineer (Contracts & Consulting)",
+    company: "Self-employed",
     location: "Remote",
-    period: "Feb 2026 to Apr 2026",
+    period: "Jan 2026 to Present",
     description:
-      "Completed an intensive online Python programming internship focused on core programming fundamentals, data structures and GitHub workflows.",
+      "I take on full-stack projects for business clients, from scoping and database design to deployment on their own domains. I work directly with the people running the business to turn real bottlenecks into working software.",
   },
   {
-    title: "Software Development Intern",
-    company: "Elkanah IT Technologies Ltd.",
-    location: "Ilorin, Kwara State · On-site",
-    period: "Sep 2025 to Dec 2025",
+    title: "Software Engineer",
+    company: "HIIT Plc",
+    location: "Abuja, Nigeria",
+    period: "Jan 2026 to Apr 2026",
     description:
-      "Learned C# programming and backend development fundamentals, with some exposure to frontend work. Gained hands-on experience in full-stack development, Git workflows and real-world software delivery.",
+      "Built Python automation scripts and internal data tools that cut out manual data handling and reduced processing errors. Also sped up routine database and data-processing tasks.",
+  },
+  {
+    title: "Backend Engineer",
+    company: "Elkanah IT Technologies",
+    location: "Ilorin, Nigeria",
+    period: "Sep 2024 to Dec 2025",
+    description:
+      "Owned REST API development in ASP.NET Core, including PostgreSQL and SQL Server schemas, validation and controller logic. The modules I delivered are running live in production, and I tracked down API performance and data validation issues during code reviews.",
   },
 ];
 

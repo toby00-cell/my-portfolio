@@ -126,7 +126,7 @@ export const services = [
     title: "E-commerce / Real Estate / EdTech",
     description:
       "Product catalogs, property listings or course platforms, robust web apps tailored to your business model.",
-    price: "₦400k",
+    price: "₦600k",
     features: ["Custom features", "Admin dashboard", "Payments-ready", "Scalable"],
   },
 ];

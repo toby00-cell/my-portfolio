@@ -5,8 +5,8 @@ import { Arrow } from "./Doodle";
 import { useEffect, useRef, useState } from "react";
 
 const skills = [
-  "TypeScript", "React", "Node.js", "Python", "C# / .NET", "Postgres",
-  "Supabase", "MongoDB", "MySQL", "Redis", "Docker", "Git", "AWS",
+  "TypeScript", "React", "Next.js", "Expo", "Node.js", "NestJS", "ASP.NET Core",
+  "Python", "PostgreSQL", "Redis", "Docker", "AWS", "Cloudflare",
 ];
 
 function useCountUp(target: string, duration = 1500) {
@@ -68,10 +68,7 @@ export function Hero() {
         </div>
 
         <div>
-          <div className="mb-6 inline-flex items-center gap-2.5 border-2 border-foreground px-3 py-1 text-sm font-semibold">
-            <span className="h-2.5 w-2.5 rounded-full bg-primary" /> Available for projects
-          </div>
-
+        
           <h1 className="font-display text-5xl leading-[1.05] sm:text-6xl md:text-7xl">
             I build websites and apps people <span className="marker">actually use.</span>
           </h1>

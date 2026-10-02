@@ -70,11 +70,11 @@ export function Hero() {
         <div>
         
           <h1 className="font-display text-5xl leading-[1.05] sm:text-6xl md:text-7xl">
-            I build websites and apps people <span className="marker">actually use.</span>
+            Web And Mobile Application Development For Businesses And Startup Founders  <span className="marker">actually use.</span>
           </h1>
 
           <p className="mt-7 max-w-xl text-base leading-relaxed text-foreground/80 md:text-lg">
-            Hi, I'm {profile.name}, a software developer in Abuja. I help founders and small businesses get online
+            Hi, I'm {profile.name}, a software developer in Abuja. I help founders and businesses get online
             with fast, good-looking websites and apps.
           </p>
 

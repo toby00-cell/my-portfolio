@@ -70,7 +70,7 @@ export function Hero() {
         <div>
         
           <h1 className="font-display text-5xl leading-[1.05] sm:text-6xl md:text-7xl">
-            Web And Mobile Application Development For Businesses And Startup Founders  <span className="marker">actually use.</span>
+            Web And Mobile Application Development For Businesses And  <span className="marker">Startup Founders.</span>
           </h1>
 
           <p className="mt-7 max-w-xl text-base leading-relaxed text-foreground/80 md:text-lg">

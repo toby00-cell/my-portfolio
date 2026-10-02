@@ -62,13 +62,18 @@ function AboutPage() {
 
         {/* Header */}
         <div className="mt-6 mb-14 border-b border-border pb-8">
-          <div className="mono-label !text-primary">§ About · The operator</div>
+          <div className="mono-label !text-primary">About · The operator</div>
           <h1 className="mt-2 font-display text-5xl uppercase md:text-6xl">
             Bright <span className="text-primary">Joel.</span>
           </h1>
           <p className="mt-4 max-w-xl text-foreground/75 leading-relaxed">
-            Software engineer based in Abuja, Nigeria. I build websites, web apps and AI agents —
-            focused on clean code, fast delivery and products that actually work in the real world.
+            Software engineer based in Abuja, Nigeria. I build websites, web apps and AI agents, focused on clean code, fast delivery and products that actually work in the real world.
+          </p>
+          <p className="mt-4 max-w-xl text-foreground/75 leading-relaxed">
+            I'm a final-year Software Engineering student at Baze University, where I've spent the last few years learning to turn ideas into shipped products rather than just theory on paper.
+          </p>
+          <p className="mt-4 max-w-xl text-foreground/75 leading-relaxed">
+  Outside of work, I'm into football and enjoy unwinding with friends and family. But honestly, I just love building things — it's less of a job and more of a habit at this point.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-yellow">
@@ -83,7 +88,7 @@ function AboutPage() {
         {/* Experience */}
         <div>
           <div className="mb-10 border-b border-border pb-6">
-            <div className="mono-label !text-primary">§ 02 · Experience</div>
+            <div className="mono-label !text-primary">02 · Experience</div>
             <h2 className="mt-2 font-display text-3xl uppercase md:text-4xl">
               Where the work <span className="text-primary">happened.</span>
             </h2>

@@ -16,7 +16,7 @@ const experience = [
     location: "Remote",
     period: "Apr 2026 — Present",
     description:
-      "Undergoing structured training in Artificial Intelligence and Machine Learning — covering core ML concepts, Python, Git and applied AI techniques.",
+      "Trained on data analysis and visualization using NumPy, Pandas, Matplotlib and Seaborn, strengthened my statistics and probability foundation, and built and deployed real machine learning models — covering the full pipeline from data to production.",
   },
   {
     title: "Python Programming Intern",
@@ -32,7 +32,7 @@ const experience = [
     location: "Ilorin, Kwara State · On-site",
     period: "Sep 2025 — Dec 2025",
     description:
-      "Assisted with software and IT-related tasks while gaining hands-on experience in full-stack development, Git workflows and real-world software delivery.",
+      "Learned C# programming and backend development fundamentals, with some exposure to frontend work. Gained hands-on experience in full-stack development, Git workflows and real-world software delivery.",
   },
 ];
 

@@ -6,7 +6,7 @@ const experience = [
     title: "Frontend Developer",
     company: "Zeenom Tech",
     location: "Remote",
-    period: "Apr 2026 — Present",
+    period: "Apr 2026 to Present",
     description:
       "Working on frontend web development tasks and contributing to user interface work across multiple projects. Stack includes JavaScript, Git and modern frontend tooling.",
   },
@@ -14,23 +14,23 @@ const experience = [
     title: "AI & Machine Learning Intern",
     company: "Techy Jaunt",
     location: "Remote",
-    period: "Apr 2026 — Present",
+    period: "Apr 2026 to Present",
     description:
-      "Trained on data analysis and visualization using NumPy, Pandas, Matplotlib and Seaborn, strengthened my statistics and probability foundation, and built and deployed real machine learning models — covering the full pipeline from data to production.",
+      "Trained on data analysis and visualization using NumPy, Pandas, Matplotlib and Seaborn, strengthened my statistics and probability foundation, and built and deployed real machine learning models, covering the full pipeline from data to production.",
   },
   {
-    title: "Python Programming Intern",
+    title: "Python Developer",
     company: "HiiT Plc",
     location: "Remote",
-    period: "Feb 2026 — Apr 2026",
+    period: "Feb 2026 to Apr 2026",
     description:
       "Completed an intensive online Python programming internship focused on core programming fundamentals, data structures and GitHub workflows.",
   },
   {
-    title: "IT Intern",
+    title: "Software Development Intern",
     company: "Elkanah IT Technologies Ltd.",
     location: "Ilorin, Kwara State · On-site",
-    period: "Sep 2025 — Dec 2025",
+    period: "Sep 2025 to Dec 2025",
     description:
       "Learned C# programming and backend development fundamentals, with some exposure to frontend work. Gained hands-on experience in full-stack development, Git workflows and real-world software delivery.",
   },
@@ -44,7 +44,7 @@ export function Experience() {
           <div>
             <div className="mono-label !text-primary"> Experience</div>
             <h2 className="mt-2 font-display text-4xl uppercase md:text-5xl">
-              Where the work <span className="text-primary">happened.</span>
+              Where I've <span className="text-primary">worked</span>
             </h2>
           </div>
           <Link to="/about" className="hidden md:inline-flex mono-label hover:text-primary">
@@ -60,7 +60,7 @@ export function Experience() {
             {experience.map((job, i) => (
               <div key={i} className="relative pl-8">
                 {/* Dot */}
-                <div className="absolute left-0 top-1.5 h-4 w-4 rounded-full border-2 border-primary bg-background" />
+                <div className="absolute left-0 top-1.5 h-4 w-4 rotate-45 border-2 border-primary bg-background" />
 
                 <div className="mono-label !text-primary mb-1">{job.period}</div>
                 <h3 className="font-display text-xl uppercase">{job.title}</h3>

@@ -9,7 +9,7 @@ export function Blog() {
         <div className="mb-12 border-b border-border pb-6">
           <div className="mono-label !text-primary"> Writing</div>
           <h2 className="mt-2 font-display text-4xl uppercase md:text-5xl">
-            Field <span className="text-primary">notes.</span>
+            Things I've <span className="text-primary">written</span>
           </h2>
         </div>
 

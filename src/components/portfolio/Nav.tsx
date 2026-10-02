@@ -27,19 +27,11 @@ export function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/85 backdrop-blur">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4">
-        <Link to="/" className="flex items-center gap-3">
-          <div className="flex h-9 w-9 items-center justify-center bg-primary font-display text-sm text-primary-foreground">
-            T
-          </div>
-          <div className="leading-tight">
-            <div className="font-display text-sm tracking-wide">Bright Joel</div>
-            <div className="mono-label">SOFTWARE DEVELOPER · 2026</div>
-          </div>
-        </Link>
+        <Link to="/" className="torn-patch font-display text-lg">Bright Joel</Link>
 
         <nav className="hidden items-center gap-8 md:flex">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="mono-label hover:text-primary transition-colors">
+            <a key={l.href} href={l.href} className="nav-link">
               {l.label}
             </a>
           ))}
@@ -47,7 +39,7 @@ export function Nav() {
           <a
             href="/Bright_Joel_Resume.pdf"
             download
-            className="mono-label hover:text-primary transition-colors"
+            className="nav-link"
           >
             Resume ↓
           </a>

@@ -5,6 +5,7 @@ import { Experience } from "@/components/portfolio/Experience";
 import { Projects } from "@/components/portfolio/Projects";
 import { Blog } from "@/components/portfolio/Blog";
 import { Contact } from "@/components/portfolio/Contact";
+import { Process } from "@/components/portfolio/Process";
 import { Footer } from "@/components/portfolio/Footer";
 import { ServiceTeaser } from "@/components/portfolio/ServiceTeaser";
 
@@ -26,9 +27,10 @@ function Index() {
       <Nav />
       <main>
         <Hero />
-        <Experience />
         <Projects />
         <ServiceTeaser />
+        <Process />
+        <Experience />
         <Blog />
         <Contact />
       </main>

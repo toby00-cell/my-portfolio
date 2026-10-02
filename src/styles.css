@@ -35,60 +35,74 @@
   --color-surface: var(--surface);
   --color-grid: var(--grid);
 
-  --font-display: "Archivo Black", "Inter", sans-serif;
+  --font-display: "Bitter", Georgia, serif;
+  --font-hand: "Permanent Marker", "Comic Sans MS", cursive;
+  --color-darkpaper: var(--darkpaper);
+  --color-ondark: var(--ondark);
+  --color-tape: var(--tape);
+  --color-inknote: var(--inknote);
   --font-body: "Inter", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 }
 
-/* ── DARK MODE (default) ── */
+/* Dark = graphite desk. Light = kraft paper. */
 :root {
   --radius: 0px;
-  --background: oklch(0.13 0.005 250);
-  --foreground: oklch(0.97 0 0);
-  --surface: oklch(0.17 0.008 250);
-  --card: oklch(0.15 0.006 250);
-  --card-foreground: oklch(0.97 0 0);
-  --popover: oklch(0.17 0.008 250);
-  --popover-foreground: oklch(0.97 0 0);
-  --primary: oklch(0.92 0.17 95);
-  --primary-foreground: oklch(0.13 0.005 250);
-  --secondary: oklch(0.2 0.008 250);
-  --secondary-foreground: oklch(0.97 0 0);
-  --muted: oklch(0.2 0.008 250);
-  --muted-foreground: oklch(0.65 0.01 250);
-  --accent: oklch(0.92 0.17 95);
-  --accent-foreground: oklch(0.13 0.005 250);
+  --background: oklch(0.19 0.012 70);
+  --foreground: oklch(0.94 0.02 88);
+  --surface: oklch(0.22 0.013 70);
+  --card: oklch(0.25 0.014 70);
+  --card-foreground: oklch(0.94 0.02 88);
+  --popover: oklch(0.25 0.014 70);
+  --popover-foreground: oklch(0.94 0.02 88);
+  --primary: oklch(0.72 0.18 52);
+  --primary-foreground: oklch(0.16 0.01 70);
+  --secondary: oklch(0.27 0.014 70);
+  --secondary-foreground: oklch(0.94 0.02 88);
+  --muted: oklch(0.27 0.014 70);
+  --muted-foreground: oklch(0.72 0.02 85);
+  --accent: oklch(0.72 0.18 52);
+  --accent-foreground: oklch(0.16 0.01 70);
   --destructive: oklch(0.6 0.22 25);
   --destructive-foreground: oklch(0.97 0 0);
-  --border: oklch(0.28 0.01 250);
-  --input: oklch(0.22 0.008 250);
-  --ring: oklch(0.92 0.17 95);
-  --grid: oklch(0.2 0.008 250 / 0.55);
+  --border: oklch(0.36 0.015 70);
+  --input: oklch(0.27 0.014 70);
+  --ring: oklch(0.72 0.18 52);
+  --grid: oklch(0.5 0.02 80 / 0.14);
+  --darkpaper: oklch(0.12 0.008 70);
+  --ondark: oklch(0.94 0.02 88);
+  --tape: oklch(0.78 0.06 88 / 0.78);
+  --inknote: oklch(0.76 0.1 250);
 }
-
-/* ── LIGHT MODE ── */
 :root:not(.dark) {
-  --background: oklch(0.98 0.002 250);
-  --foreground: oklch(0.13 0.005 250);
-  --surface: oklch(0.94 0.003 250);
-  --card: oklch(0.96 0.003 250);
-  --card-foreground: oklch(0.13 0.005 250);
-  --popover: oklch(0.96 0.003 250);
-  --popover-foreground: oklch(0.13 0.005 250);
-  --primary: oklch(0.75 0.17 75);
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.92 0.004 250);
-  --secondary-foreground: oklch(0.13 0.005 250);
-  --muted: oklch(0.92 0.004 250);
-  --muted-foreground: oklch(0.45 0.01 250);
-  --accent: oklch(0.75 0.17 75);
-  --accent-foreground: oklch(0.98 0 0);
+  --background: oklch(0.91 0.035 88);
+  --foreground: oklch(0.2 0.02 255);
+  --surface: oklch(0.86 0.045 82);
+  --card: oklch(0.95 0.025 90);
+  --card-foreground: oklch(0.2 0.02 255);
+  --popover: oklch(0.95 0.025 90);
+  --popover-foreground: oklch(0.2 0.02 255);
+  --primary: oklch(0.6 0.18 45);
+  --primary-foreground: oklch(0.98 0.01 90);
+  --secondary: oklch(0.88 0.035 85);
+  --secondary-foreground: oklch(0.2 0.02 255);
+  --muted: oklch(0.88 0.035 85);
+  --muted-foreground: oklch(0.4 0.02 255);
+  --accent: oklch(0.6 0.18 45);
+  --accent-foreground: oklch(0.98 0.01 90);
   --destructive: oklch(0.55 0.22 25);
   --destructive-foreground: oklch(0.98 0 0);
-  --border: oklch(0.82 0.006 250);
-  --input: oklch(0.88 0.005 250);
-  --ring: oklch(0.75 0.17 75);
-  --grid: oklch(0.82 0.006 250 / 0.55);
+  --border: oklch(0.72 0.035 82);
+  --input: oklch(0.88 0.035 85);
+  --ring: oklch(0.6 0.18 45);
+  --grid: oklch(0.45 0.04 80 / 0.16);
+  --darkpaper: oklch(0.27 0.012 60);
+  --ondark: oklch(0.95 0.025 90);
+  --tape: oklch(0.8 0.07 88 / 0.8);
+  --inknote: oklch(0.38 0.12 255);
+}
+:root {
+  --grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .45 0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='.5'/></svg>");
 }
 
 @layer base {
@@ -104,14 +118,16 @@
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     background-image:
+      var(--grain),
       linear-gradient(to right, var(--color-grid) 1px, transparent 1px),
       linear-gradient(to bottom, var(--color-grid) 1px, transparent 1px);
-    background-size: 56px 56px;
+    background-size: 40px 40px;
     background-attachment: fixed;
   }
   h1, h2, h3, h4 {
     font-family: var(--font-display);
     letter-spacing: -0.01em;
+    font-weight: 800;
   }
   .font-mono, code, kbd {
     font-family: var(--font-mono);
@@ -140,41 +156,114 @@
 }
 
 @utility btn-yellow {
+  position: relative;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--color-primary);
-  color: var(--color-primary-foreground);
-  font-family: var(--font-mono);
+  background: var(--btn-bg, var(--color-foreground));
+  color: var(--btn-fg, var(--color-background));
+  font-family: var(--font-body);
   font-weight: 700;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.85rem 1.25rem;
-  border: 1px solid var(--color-primary);
-  box-shadow: 4px 4px 0 0 oklch(0.92 0.17 95 / 0.25);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-  &:hover {
-    transform: translate(-1px, -1px);
-    box-shadow: 6px 6px 0 0 oklch(0.92 0.17 95 / 0.4);
+  font-size: 0.95rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 4px;
+  transition: transform 0.15s ease;
+  &:hover { transform: translateY(-2px) rotate(-0.5deg); }
+  &::before, &::after {
+    content: ""; position: absolute; width: 30px; height: 15px; background: var(--color-tape);
+    clip-path: polygon(0 10%, 8% 0, 16% 12%, 100% 8%, 92% 50%, 100% 92%, 8% 100%, 0 70%, 6% 40%);
   }
+  &::before { top: -6px; left: -12px; transform: rotate(-35deg); }
+  &::after { bottom: -6px; right: -12px; transform: rotate(-35deg); }
 }
-
 @utility btn-outline {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: transparent;
-  color: var(--color-primary);
-  font-family: var(--font-mono);
+  color: var(--btn-line, var(--color-foreground));
+  font-family: var(--font-body);
   font-weight: 700;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  padding: 0.85rem 1.25rem;
-  border: 1px solid var(--color-primary);
-  transition: background 0.15s ease;
-  &:hover {
-    background: oklch(0.92 0.17 95 / 0.08);
+  font-size: 0.95rem;
+  padding: 0.8rem 1.4rem;
+  border: 2px solid var(--btn-line, var(--color-foreground));
+  border-radius: 4px;
+  transition: transform 0.15s ease;
+  &:hover { transform: translateY(-2px); }
+}
+@utility on-dark {
+  color: var(--color-ondark);
+  --btn-bg: var(--color-ondark);
+  --btn-fg: var(--color-darkpaper);
+  --btn-line: var(--color-ondark);
+}
+@utility nav-link {
+  font-weight: 600;
+  font-size: 0.95rem;
+  background: linear-gradient(var(--color-primary), var(--color-primary)) no-repeat 0 100% / 0 3px;
+  padding-bottom: 4px;
+  transition: background-size 0.25s ease;
+  &:hover { background-size: 100% 3px; }
+}
+/* Marker underline, like a highlighter swipe */
+@utility marker {
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12' preserveAspectRatio='none'><path d='M2 8 C40 2, 90 11, 130 5 S190 7, 198 4' fill='none' stroke='%23e8742a' stroke-width='5' stroke-linecap='round'/></svg>") no-repeat 0 100% / 100% 0.32em;
+  padding-bottom: 0.2em;
+  box-decoration-break: clone;
+}
+@utility scribble {
+  display: inline-block;
+  padding: 0.05em 0.25em;
+  line-height: 1.1;
+  background: linear-gradient(transparent 50%, color-mix(in oklab, var(--color-primary) 60%, transparent) 50% 92%, transparent 92%);
+  transform: rotate(-3deg);
+}
+@utility note {
+  font-family: var(--font-hand);
+  color: var(--color-inknote);
+  transform: rotate(-4deg);
+  display: inline-block;
+}
+@utility tape {
+  position: relative;
+  &::before {
+    content: ""; position: absolute; top: -14px; left: 50%; width: 110px; height: 28px; z-index: 2;
+    transform: translateX(-50%) rotate(-3deg); background: var(--color-tape);
+    clip-path: polygon(3% 0, 100% 0, 97% 25%, 100% 50%, 97% 75%, 100% 100%, 3% 100%, 0 75%, 3% 50%, 0 25%);
   }
 }
+@utility polaroid {
+  background: var(--color-card);
+  padding: 0.9rem 0.9rem 1.2rem;
+  box-shadow: 0 14px 30px rgb(0 0 0 / 0.28);
+  border-radius: 2px;
+}
+@utility kraft {
+  background-color: var(--color-surface);
+  background-image: var(--grain);
+  box-shadow: 0 10px 28px rgb(0 0 0 / 0.14);
+  border-radius: 6px;
+}
+@utility torn-wrap { filter: drop-shadow(0 8px 12px rgb(0 0 0 / 0.3)); }
+@utility torn {
+  background-color: var(--color-darkpaper);
+  background-image: var(--grain);
+  clip-path: polygon(0.0% 2.9px, 2.9% 1.4px, 5.9% 5.9px, 8.8% 0.7px, 11.8% 4.8px, 14.7% 3.3px, 17.6% 0.5px, 20.6% 4.6px, 23.5% 0.3px, 26.5% 3.9px, 29.4% 0.6px, 32.4% 0.8px, 35.3% 3.8px, 38.2% 7.4px, 41.2% 1.1px, 44.1% 2.0px, 47.1% 5.6px, 50.0% 8.5px, 52.9% 5.2px, 55.9% 3.6px, 58.8% 8.8px, 61.8% 0.4px, 64.7% 7.7px, 67.6% 2.6px, 70.6% 1.3px, 73.5% 1.1px, 76.5% 2.8px, 79.4% 7.3px, 82.4% 1.6px, 85.3% 5.2px, 88.2% 5.8px, 91.2% 3.4px, 94.1% 4.9px, 97.1% 0.6px, 100.0% 0.5px, calc(100% - 1.1px) 16.7%, calc(100% - 3.7px) 33.3%, calc(100% - 2.3px) 50.0%, calc(100% - 1.7px) 66.7%, calc(100% - 3.2px) 83.3%, 100.0% calc(100% - 4.1px), 97.1% calc(100% - 2.7px), 94.1% calc(100% - 7.1px), 91.2% calc(100% - 6.3px), 88.2% calc(100% - 2.2px), 85.3% calc(100% - 5.2px), 82.4% calc(100% - 4.7px), 79.4% calc(100% - 7.9px), 76.5% calc(100% - 6.6px), 73.5% calc(100% - 2.6px), 70.6% calc(100% - 8.8px), 67.6% calc(100% - 1.1px), 64.7% calc(100% - 3.8px), 61.8% calc(100% - 6.8px), 58.8% calc(100% - 1.4px), 55.9% calc(100% - 4.4px), 52.9% calc(100% - 0.4px), 50.0% calc(100% - 6.0px), 47.1% calc(100% - 6.9px), 44.1% calc(100% - 5.2px), 41.2% calc(100% - 7.9px), 38.2% calc(100% - 2.8px), 35.3% calc(100% - 6.3px), 32.4% calc(100% - 5.3px), 29.4% calc(100% - 5.2px), 26.5% calc(100% - 4.1px), 23.5% calc(100% - 7.6px), 20.6% calc(100% - 8.5px), 17.6% calc(100% - 4.3px), 14.7% calc(100% - 6.0px), 11.8% calc(100% - 0.5px), 8.8% calc(100% - 6.3px), 5.9% calc(100% - 5.8px), 2.9% calc(100% - 8.9px), 0.0% calc(100% - 7.4px), 1.5px 83.3%, 2.1px 66.7%, 3.6px 50.0%, 0.1px 33.3%, 2.5px 16.7%);
+}
+@utility torn-patch {
+  background-color: var(--color-darkpaper);
+  background-image: var(--grain);
+  color: var(--color-ondark);
+  padding: 0.55rem 1.3rem;
+  clip-path: polygon(0.0% 0.7px, 7.1% 0.5px, 14.3% 0.2px, 21.4% 3.1px, 28.6% 0.5px, 35.7% 1.0px, 42.9% 1.6px, 50.0% 3.5px, 57.1% 0.3px, 64.3% 1.8px, 71.4% 2.2px, 78.6% 3.5px, 85.7% 3.3px, 92.9% 3.5px, 100.0% 1.1px, calc(100% - 1.0px) 33.3%, calc(100% - 0.9px) 66.7%, 100.0% calc(100% - 3.5px), 92.9% calc(100% - 3.8px), 85.7% calc(100% - 0.6px), 78.6% calc(100% - 0.7px), 71.4% calc(100% - 0.9px), 64.3% calc(100% - 0.9px), 57.1% calc(100% - 1.9px), 50.0% calc(100% - 2.4px), 42.9% calc(100% - 1.1px), 35.7% calc(100% - 0.0px), 28.6% calc(100% - 1.7px), 21.4% calc(100% - 1.5px), 14.3% calc(100% - 2.3px), 7.1% calc(100% - 3.8px), 0.0% calc(100% - 2.8px), 1.2px 66.7%, 1.5px 33.3%);
+}
+@utility fig-tag {
+  position: absolute; top: 0.75rem; right: 0.75rem; background: var(--color-tape);
+  color: var(--color-foreground); font-family: var(--font-mono); font-size: 0.65rem;
+  padding: 0.2rem 0.5rem; transform: rotate(2deg);
+}
+@utility chamfer { border-radius: 4px; }
+@utility hazard { background: var(--color-tape); }
+@utility outline-num { font-family: var(--font-display); color: var(--color-primary); line-height: 0.9; }
+
+/* Headings read as normal title case, like the reference. Unlayered so it beats utilities. */
+h1, h2, h3, h4 { text-transform: none; }

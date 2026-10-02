@@ -16,36 +16,44 @@ export const Route = createFileRoute("/about")({
 
 const experience = [
   {
-    title: "Frontend Developer Intern",
+    title: "Frontend Developer",
     company: "Zeenom Tech",
     location: "Remote",
-    period: "Apr 2026 — Present",
+    period: "Apr 2026 to Present",
     description:
-      "Working on frontend web development tasks and contributing to user interface work across multiple projects. Stack includes JavaScript, Git and modern frontend tooling.",
+      "I lead frontend decisions and turn designs into React and TypeScript apps that real users depend on. I care about performance, accessibility and reliable API integrations, so the interface stays in sync even on busy workflows.",
   },
   {
-    title: "AI & Machine Learning Intern",
+    title: "Software & Machine Learning Engineer",
     company: "Techy Jaunt",
     location: "Remote",
-    period: "Apr 2026 — Present",
+    period: "Apr 2026 to Present",
     description:
-      "Undergoing structured training in Artificial Intelligence and Machine Learning — covering core ML concepts, Python, Git and applied AI techniques.",
+      "I take machine learning models out of notebooks and into working software. That means Python data preprocessing, model integration and automation that product features can build on.",
   },
   {
-    title: "Python Programming Intern",
-    company: "HiiT Plc",
+    title: "Software Engineer (Contracts & Consulting)",
+    company: "Self-employed",
     location: "Remote",
-    period: "Feb 2026 — Apr 2026",
+    period: "Jan 2026 to Present",
     description:
-      "Completed an intensive online Python programming internship focused on core programming fundamentals, data structures and GitHub workflows.",
+      "I take on full-stack projects for business clients, from scoping and database design to deployment on their own domains. I work directly with the people running the business to turn real bottlenecks into working software.",
   },
   {
-    title: "IT Intern",
-    company: "Elkanah IT Technologies Ltd.",
-    location: "Ilorin, Kwara State · On-site",
-    period: "Sep 2025 — Dec 2025",
+    title: "Software Engineer",
+    company: "HIIT Plc",
+    location: "Abuja, Nigeria",
+    period: "Jan 2026 to Apr 2026",
     description:
-      "Assisted with software and IT-related tasks while gaining hands-on experience in full-stack development, Git workflows and real-world software delivery.",
+      "Built Python automation scripts and internal data tools that cut out manual data handling and reduced processing errors. Also sped up routine database and data-processing tasks.",
+  },
+  {
+    title: "Backend Engineer",
+    company: "Elkanah IT Technologies",
+    location: "Ilorin, Nigeria",
+    period: "Sep 2024 to Dec 2025",
+    description:
+      "Owned REST API development in ASP.NET Core, including PostgreSQL and SQL Server schemas, validation and controller logic. The modules I delivered are running live in production, and I tracked down API performance and data validation issues during code reviews.",
   },
 ];
 
@@ -67,13 +75,13 @@ function AboutPage() {
             Bright <span className="text-primary">Joel.</span>
           </h1>
           <p className="mt-4 max-w-xl text-foreground/75 leading-relaxed">
-            Software engineer based in Abuja, Nigeria. I build websites, web apps and AI agents, focused on clean code, fast delivery and products that actually work in the real world.
+            Software engineer based in Abuja, Nigeria. I've built and shipped production products in fintech, supply chain, sports-tech and gaming, from an offline-first inventory app to real-time game servers. I work across the stack: React and Next.js on the front, ASP.NET Core, NestJS and Node.js on the back.
           </p>
           <p className="mt-4 max-w-xl text-foreground/75 leading-relaxed">
-            I'm a final-year Software Engineering student at Baze University, where I've spent the last few years learning to turn ideas into shipped products rather than just theory on paper.
+            I studied Software Engineering at Baze University in Abuja (B.Sc., 2026) and I'm an AWS Certified Cloud Practitioner. I like owning a product from the first conversation about the problem all the way to deployment.
           </p>
           <p className="mt-4 max-w-xl text-foreground/75 leading-relaxed">
-  Outside of work, I'm into football and enjoy unwinding with friends and family. But honestly, I just love building things — it's less of a job and more of a habit at this point.
+  Outside of work, I'm into football and enjoy unwinding with friends and family. But honestly, I just love building things. It's less of a job and more of a habit at this point.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a href={whatsappUrl} target="_blank" rel="noreferrer" className="btn-yellow">

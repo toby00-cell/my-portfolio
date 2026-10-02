@@ -26,7 +26,7 @@ export const projects: Project[] = [
     category: "Real Estate",
     tagline: "Property listings & agency website",
     description:
-      "A polished real estate platform for browsing properties, agent listings and direct inquiries — built for trust, speed and a clean buyer experience.",
+      "A polished real estate platform for browsing properties, agent listings and direct inquiries, built for trust, speed and a clean buyer experience.",
     problem:
       "The client was running their property business entirely through WhatsApp and phone calls. Potential buyers had no way to browse listings, filter by budget or verify the agency's credibility before making contact.",
     solution:
@@ -43,7 +43,7 @@ export const projects: Project[] = [
     category: "EdTech",
     tagline: "Tech skills learning platform",
     description:
-      "An EdTech platform built for students learning real tech skills — course management, clean UI and a distraction-free learning experience.",
+      "An EdTech platform built for students learning real tech skills, course management, clean UI and a distraction-free learning experience.",
     problem:
       "Students learning tech skills in Nigeria were scattered across YouTube, Telegram groups and PDFs with no structured learning path or way to track progress.",
     solution:
@@ -60,7 +60,7 @@ export const projects: Project[] = [
     category: "Business",
     tagline: "Grassroots football talent & wellness platform",
     description:
-      "A platform for scouting grassroots Nigerian football talent and supporting player wellness — featured players, wellness hub, club management and talent discovery.",
+      "A platform for scouting grassroots Nigerian football talent and supporting player wellness, featured players, wellness hub, club management and talent discovery.",
     problem:
       "Talented grassroots Nigerian footballers had no digital presence or way to get noticed by scouts and clubs. Discovery happened only through physical connections and word of mouth.",
     solution:
@@ -77,9 +77,9 @@ export const projects: Project[] = [
     category: "E-commerce",
     tagline: "Nigerian fashion e-commerce store",
     description:
-      "A conversion-focused online store built for Nigerian fashion brands — product listings, cart and checkout flows designed to feel premium and load fast on mobile.",
+      "A conversion-focused online store built for Nigerian fashion brands, product listings, cart and checkout flows designed to feel premium and load fast on mobile.",
     problem:
-      "The brand was selling exclusively through Instagram DMs — a slow, manual process with no cart, no checkout and no way to scale. Orders got lost and customers dropped off.",
+      "The brand was selling exclusively through Instagram DMs, a slow, manual process with no cart, no checkout and no way to scale. Orders got lost and customers dropped off.",
     solution:
       "Built a full e-commerce store with product catalog, cart, checkout flow and order management. Optimised heavily for mobile since over 90% of their customers shop on phones. Checkout to order takes under 2 minutes.",
     image: naijathreads,
@@ -94,7 +94,7 @@ export const projects: Project[] = [
     category: "Business",
     tagline: "Independent agricultural news platform",
     description:
-      "An editorial news platform covering Nigerian agriculture — agritech, livestock, markets, climate and policy. Built for farmers, agribusiness owners and food-system professionals.",
+      "An editorial news platform covering Nigerian agriculture, agritech, livestock, markets, climate and policy. Built for farmers, agribusiness owners and food-system professionals.",
     problem:
       "Nigerian agricultural news was fragmented across unreliable blogs, WhatsApp forwards and general news sites that buried farming content. There was no dedicated, professional source for the agribusiness community.",
     solution:
@@ -111,21 +111,21 @@ export const services = [
   {
     title: "Landing Pages",
     description:
-      "A clean, fast landing page that turns visitors into customers — built for restaurants, salons, logistics and small businesses.",
+      "A clean, fast landing page that turns visitors into customers, built for restaurants, salons, logistics and small businesses.",
     price: "₦150k",
     features: ["1–3 sections", "Mobile-first", "Contact form", "Delivered in days"],
   },
   {
     title: "Full Business Website",
     description:
-      "A complete multi-page website giving your business a credible online home — about, services, contact and more.",
+      "A complete multi-page website giving your business a credible online home, about, services, contact and more.",
     price: "₦300k",
     features: ["Up to 6 pages", "CMS-ready", "SEO setup", "Custom design"],
   },
   {
     title: "E-commerce / Real Estate / EdTech",
     description:
-      "Product catalogs, property listings or course platforms — robust web apps tailored to your business model.",
+      "Product catalogs, property listings or course platforms, robust web apps tailored to your business model.",
     price: "₦400k",
     features: ["Custom features", "Admin dashboard", "Payments-ready", "Scalable"],
   },
@@ -135,7 +135,7 @@ export const profile = {
   name: "Bright Joel",
   role: "Software Developer & Web Designer",
   blurb:
-    "I help Nigerian founders and small businesses launch beautiful, fast websites — from landing pages to e-commerce, real estate and EdTech platforms.",
+    "I help Nigerian founders and small businesses launch beautiful, fast websites, from landing pages to e-commerce, real estate and EdTech platforms.",
   location: "Abuja, Nigeria",
   email: "joelbright508@gmail.com",
   whatsapp: "2349040522602",
@@ -163,21 +163,21 @@ export const blogPosts: BlogPost[] = [
     id: "why-your-business-needs-a-website",
     title: "Why every Nigerian business needs a website in 2025",
     excerpt:
-      "Instagram and WhatsApp are great, but they're rented land. A website is the only online space you truly own — and it works for you 24/7 even when you're asleep.",
+      "Instagram and WhatsApp are great, but they're rented land. A website is the only online space you truly own, and it works for you 24/7 even when you're asleep.",
     category: "Business",
     readTime: "3 min read",
     date: "May 2025",
-    content: `A lot of Nigerian business owners think Instagram and WhatsApp are enough. And honestly? They work — until they don't.
+    content: `A lot of Nigerian business owners think Instagram and WhatsApp are enough. And honestly? They work, until they don't.
 
 Here's the problem: Instagram can ban your account tomorrow. WhatsApp can go down for hours. Your followers can disappear overnight. All of that is rented land. You don't own any of it.
 
-A website is the only online space that is completely yours. No algorithm deciding who sees your content. No platform that can shut you down. Just your business, your brand, your customers — 24 hours a day, 7 days a week, even while you sleep.
+A website is the only online space that is completely yours. No algorithm deciding who sees your content. No platform that can shut you down. Just your business, your brand, your customers, 24 hours a day, 7 days a week, even while you sleep.
 
 What a website actually does for your business
 
 A customer hears about you and Googles your name. If nothing shows up, they move on to someone else. A website makes you real. It tells people you're serious.
 
-It also works as your best salesperson. It answers questions, shows your products or services, builds trust, and collects inquiries — all without you lifting a finger.
+It also works as your best salesperson. It answers questions, shows your products or services, builds trust, and collects inquiries, all without you lifting a finger.
 
 But I already get customers on Instagram...
 
@@ -185,7 +185,7 @@ Great. Now imagine getting those same customers plus the ones who don't use Inst
 
 A website doesn't replace Instagram. It completes it.
 
-If you're a Nigerian business owner still without a website in 2025, you're not just missing out — you're actively losing customers to competitors who have one.`,
+If you're a Nigerian business owner still without a website in 2025, you're not just missing out, you're actively losing customers to competitors who have one.`,
   },
   {
     id: "what-makes-a-good-nigerian-business-website",
@@ -195,7 +195,7 @@ If you're a Nigerian business owner still without a website in 2025, you're not 
     category: "Web Design",
     readTime: "4 min read",
     date: "May 2025",
-    content: `Most Nigerian business websites lose visitors in the first 10 seconds. Not because the business is bad — but because the website doesn't do its job.
+    content: `Most Nigerian business websites lose visitors in the first 10 seconds. Not because the business is bad, but because the website doesn't do its job.
 
 Here are 5 things that separate websites that bring in customers from ones that just take up space on the internet.
 
@@ -213,7 +213,7 @@ Stock photos of random people smiling in suits kill trust immediately. Use real 
 
 4. Social proof
 
-Reviews, testimonials, client logos, before-and-after results — whatever you have. People trust other people more than they trust businesses. Show them that others have used you and been happy.
+Reviews, testimonials, client logos, before-and-after results, whatever you have. People trust other people more than they trust businesses. Show them that others have used you and been happy.
 
 5. A fast, mobile-friendly design
 
@@ -237,7 +237,7 @@ If your agency isn't showing up in that search, you don't exist to that buyer.
 
 The trust problem
 
-Real estate is one of the highest-trust industries there is. People are spending millions of naira. They need to feel confident before they commit. A professional website — with your listings, your team, your past deals, your contact information — does more to build that trust than any WhatsApp message ever can.
+Real estate is one of the highest-trust industries there is. People are spending millions of naira. They need to feel confident before they commit. A professional website, with your listings, your team, your past deals, your contact information, does more to build that trust than any WhatsApp message ever can.
 
 What a good real estate website does
 
@@ -245,7 +245,7 @@ It shows all your available properties in one place, with photos, prices and loc
 
 The agents winning right now
 
-The estate agents growing their business in Nigeria today have one thing in common — they show up online where their buyers are already looking. They're not just posting on Facebook and hoping for the best. They have a professional presence that works for them around the clock.
+The estate agents growing their business in Nigeria today have one thing in common, they show up online where their buyers are already looking. They're not just posting on Facebook and hoping for the best. They have a professional presence that works for them around the clock.
 
 The good news? A proper real estate website doesn't have to cost a fortune or take months to build. If you're an estate agent or property company ready to stop losing clients to Google, feel free to reach out.`,
   },

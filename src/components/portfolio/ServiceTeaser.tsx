@@ -1,64 +1,45 @@
-import { Link } from "@tanstack/react-router";
-import { ArrowRight, Globe, Bot, Code, GitBranch, Database, Wrench } from "lucide-react";
-
-const items = [
-  {
-    icon: Globe,
-    label: "Website & App Development",
-    description: "Full-stack web apps, landing pages and business sites — fast, scalable and built to last.",
-  },
-  {
-    icon: Bot,
-    label: "AI Agents & Automation",
-    description: "Custom AI agents and automated workflows that handle repetitive tasks and scale your operations.",
-  },
-  {
-    icon: Database,
-    label: "Backend & API Development",
-    description: "REST APIs, database design and server-side logic — clean architecture, built for production.",
-  },
-  {
-    icon: Wrench,
-    label: "Maintenance & Optimization",
-    description: "Bug fixes, performance tuning and feature additions for existing codebases — fast turnaround.",
-  },
-];
+import { services, profile } from "@/data/portfolio";
+import { ArrowRight, Check } from "lucide-react";
+import { Arrow } from "./Doodle";
 
 export function ServiceTeaser() {
+  const wa = `https://wa.me/${profile.whatsapp}?text=${encodeURIComponent("Hi Bright, I'd like to start a project.")}`;
   return (
-    <section className="border-b border-border bg-surface">
-      <div className="mx-auto max-w-6xl px-4 py-20">
-        <div className="mb-12 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+    <section id="services" className="py-20">
+      <div className="mx-auto max-w-6xl px-4">
+        <div className="mb-14 flex flex-wrap items-end justify-between gap-6">
           <div>
-            <div className="mono-label !text-primary"> Services</div>
-            <h2 className="mt-2 font-display text-4xl uppercase md:text-5xl">
-              What I <span className="text-primary">build for you.</span>
+            <h2 className="font-display text-5xl md:text-6xl">
+              Work with <span className="marker">me</span>
             </h2>
-            <p className="mt-4 max-w-md text-foreground/75">
-              From landing pages that convert to AI agents that scale your ops —
-              production-ready deliverables, shipped in days, not months.
-            </p>
+            <p className="mt-4 max-w-lg text-foreground/75">Pick what fits your business. Not sure which one? Message me and we'll work it out.</p>
           </div>
-          <Link to="/services" className="btn-yellow self-start md:self-auto">
-            See Full Services <ArrowRight className="h-4 w-4" />
-          </Link>
+          <span className="note hidden items-start gap-1 text-lg md:inline-flex">
+            pick one <Arrow className="mt-3 h-8 w-10" />
+          </span>
         </div>
 
-        <div className="grid grid-cols-1 gap-px border border-border bg-border sm:grid-cols-2 md:grid-cols-3">
-          {items.map(({ icon: Icon, label, description }, i) => (
-            <div
-              key={label}
-              className="group relative bg-card p-6 transition-colors hover:bg-surface"
-            >
-              <div className="flex items-start justify-between">
-                <div className="flex h-10 w-10 items-center justify-center border border-border bg-surface text-primary transition-colors group-hover:border-primary">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <span className="mono-label">0{i + 1}</span>
+        <div className="grid gap-9 md:grid-cols-3">
+          {services.map((s, i) => (
+            <div key={s.title} className={`tape on-dark flex flex-col rounded-md bg-darkpaper p-7 shadow-xl ${i === 0 ? "-rotate-1" : i === 2 ? "rotate-1" : ""}`}
+              style={{ backgroundImage: "var(--grain)" }}>
+              <div className="font-display text-3xl text-primary">{String(i + 1).padStart(2, "0")}</div>
+              <h3 className="mt-3 font-display text-3xl leading-tight">{s.title}</h3>
+              <p className="mt-3 text-sm opacity-75">{s.description}</p>
+              <div className="my-6 border-y border-white/15 py-4">
+                <span className="text-sm opacity-60">From</span>
+                <div className="font-display text-5xl">{s.price}</div>
               </div>
-
-              <div className="mt-5 font-display text-base uppercase">{label}</div>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{description}</p>
+              <ul className="flex-1 space-y-2.5">
+                {s.features.map((f) => (
+                  <li key={f} className="flex items-center gap-2.5 text-sm">
+                    <Check className="h-4 w-4 flex-shrink-0 text-primary" /> {f}
+                  </li>
+                ))}
+              </ul>
+              <a href={wa} target="_blank" rel="noreferrer" className="btn-yellow mt-8 justify-center">
+                Start a project <ArrowRight className="h-4 w-4" />
+              </a>
             </div>
           ))}
         </div>
